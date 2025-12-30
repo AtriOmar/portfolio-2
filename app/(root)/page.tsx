@@ -38,7 +38,7 @@ export default function IndexPage() {
     url: siteConfig.url,
     image: siteConfig.ogImage,
     jobTitle: "Full Stack Developer",
-    sameAs: [siteConfig.links.github, siteConfig.links.twitter],
+    sameAs: [siteConfig.links.github],
   };
 
   // Structured data for website as a software application (template)
@@ -80,14 +80,14 @@ export default function IndexPage() {
             height={100}
             width={100}
             sizes="100vw"
-            className="w-[60%] max-w-[16rem] h-auto mb-0 md:mb-2 border-8 border-primary rounded-full bg-primary"
-            alt="Naman Barkiya - Full Stack Developer Portfolio"
+            className="w-[60%] max-w-[16rem] h-auto mb-0 md:mb-2 border-6 border-red-700 rounded-full bg-primary"
+            alt="Omar Atri- Full Stack Developer Portfolio"
             priority
           />
           <AnimatedText
             as="h1"
             delay={0.2}
-            className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
+            className="font-semibold text-red-700 text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Omar Atri
           </AnimatedText>
@@ -96,19 +96,13 @@ export default function IndexPage() {
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Full Stack Developer
+            Full Stack JS Developer
           </AnimatedText>
-          <div className="max-w-2xl mt-4 text-center">
-            <p className="text-muted-foreground text-sm sm:text-base leading-normal">
-              Open-source Next.js portfolio template. Fork this on GitHub to
-              create your own developer portfolio.
-            </p>
-          </div>
 
           <div className="flex sm:flex-row flex-col justify-center items-center gap-3 sm:space-x-4 mt-10">
             <AnimatedText delay={0.6}>
               <Link
-                href={"https://github.com/namanbarkiya"}
+                href={"https://github.com/AtriOmar"}
                 target="_blank"
                 className={cn(buttonVariants({ size: "lg" }))}
                 aria-label="View Naman Barkiya's GitHub profile"

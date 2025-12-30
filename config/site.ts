@@ -3,19 +3,18 @@ export const siteConfig = {
   authorName: "Omar Atri",
   username: "omaratri",
   description:
-    "Naman Barkiya's portfolio - A modern, responsive Next.js portfolio for developers. This open-source template can be customized to showcase your own skills, projects, and professional experience.",
-  url: "https://nbarkiya.xyz",
+    "Omar Atri's portfolio - A modern, responsive Next.js portfolio for developers. This open-source template can be customized to showcase your own skills, projects, and professional experience.",
+  url: "https://omaratri.com",
   links: {
-    twitter: "https://x.com/namanbarkiya",
-    github: "https://github.com/namanbarkiya",
+    github: "https://github.com/AtriOmar",
   },
-  ogImage: "https://nbarkiya.xyz/profile-img.jpg",
+  ogImage: "https://omaratri.com/profile-img.jpg",
   iconIco:
     "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357384/assets/naman-favicon.ico",
   logoIcon:
     "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357294/assets/naman-logo.png",
   keywords: [
-    "Naman Barkiya",
+    "Omar Atri",
     "Full Stack Developer",
     "Web Developer Portfolio",
     "Next.js portfolio template",

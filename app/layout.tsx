@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { Inter as FontSans } from "next/font/google";
+import { Rubik } from "next/font/google";
 import localFont from "next/font/local";
 
 import { ThemeProvider } from "@/components/common/theme-provider";
@@ -9,10 +9,11 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { ModalProvider } from "@/providers/modal-provider";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+// const fontSans = FontSans({
+//   subsets: ["latin"],
+//   variable: "--font-sans",
+// });
+const rubik = Rubik({ subsets: ["latin"] });
 
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
@@ -105,7 +106,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          rubik.className,
           fontHeading.variable
         )}
       >

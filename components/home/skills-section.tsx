@@ -10,7 +10,7 @@ import { featuredSkills } from "@/config/skills";
 
 export function SkillsSection() {
   return (
-    <AnimatedSection className="space-y-6 py-10 bg-muted container" id="skills">
+    <AnimatedSection className="space-y-6 py-10 pt-20 container" id="skills">
       <div className="flex flex-col items-center space-y-4 max-w-232 mx-auto text-center">
         <AnimatedText
           as="h2"

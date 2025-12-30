@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
-import { ContributionsSection } from "@/components/home/contributions-section";
 import { ExperienceSection } from "@/components/home/experience-section";
 import { HeroSection } from "@/components/home/hero-section";
 import { ProjectsSection } from "@/components/home/projects-section";
@@ -65,7 +64,7 @@ export default function IndexPage() {
       <HeroSection />
       <SkillsSection />
       <ProjectsSection />
-      <ContributionsSection />
+      {/* <ContributionsSection /> */}
       <ExperienceSection />
     </ClientPageWrapper>
   );

@@ -74,7 +74,7 @@ export default function IndexPage() {
       />
 
       <section className="flex items-center space-y-6 h-screen mb-0 md:py-20 lg:py-32 pt-6 pb-8 md:pb-12">
-        <div className="flex flex-col items-center gap-4 max-w-[64rem] -mt-20 text-center container">
+        <div className="flex flex-col items-center gap-4 max-w-5xl -mt-20 text-center container">
           <Image
             src={profileImg}
             height={100}
@@ -98,7 +98,7 @@ export default function IndexPage() {
           >
             Full Stack Developer
           </AnimatedText>
-          <div className="max-w-[42rem] mt-4 text-center">
+          <div className="max-w-2xl mt-4 text-center">
             <p className="text-muted-foreground text-sm sm:text-base leading-normal">
               Open-source Next.js portfolio template. Fork this on GitHub to
               create your own developer portfolio.
@@ -141,7 +141,7 @@ export default function IndexPage() {
         className="space-y-6 py-10 bg-muted container"
         id="skills"
       >
-        <div className="flex flex-col items-center space-y-4 max-w-[58rem] mx-auto text-center">
+        <div className="flex flex-col items-center space-y-4 max-w-232 mx-auto text-center">
           <AnimatedText
             as="h2"
             className="font-heading text-3xl sm:text-3xl md:text-6xl leading-[1.1]"
@@ -170,7 +170,7 @@ export default function IndexPage() {
         className="space-y-6 my-14 py-10 container"
         id="projects"
       >
-        <div className="flex flex-col items-center space-y-4 max-w-[58rem] mx-auto text-center">
+        <div className="flex flex-col items-center space-y-4 max-w-232 mx-auto text-center">
           <AnimatedText
             as="h2"
             className="font-heading text-3xl sm:text-3xl md:text-6xl leading-[1.1]"
@@ -203,7 +203,7 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
-        {/* <div className="md:max-w-[58rem] mx-auto text-center">
+        {/* <div className="md:max-w-232 mx-auto text-center">
                     <p className="text-muted-foreground sm:text-lg leading-normal sm:leading-7">
                         See all the relevant experiences.
                     </p>
@@ -214,7 +214,7 @@ export default function IndexPage() {
         className="space-y-6 my-14 py-10 bg-muted container"
         id="contributions"
       >
-        <div className="flex flex-col items-center space-y-4 max-w-[58rem] mx-auto text-center">
+        <div className="flex flex-col items-center space-y-4 max-w-232 mx-auto text-center">
           <AnimatedText
             as="h2"
             className="font-heading text-3xl sm:text-3xl md:text-6xl leading-[1.1]"
@@ -245,7 +245,7 @@ export default function IndexPage() {
         className="space-y-6 my-14 py-10 container"
         id="experience"
       >
-        <div className="flex flex-col items-center space-y-4 max-w-[58rem] mx-auto text-center">
+        <div className="flex flex-col items-center space-y-4 max-w-232 mx-auto text-center">
           <AnimatedText
             as="h2"
             className="font-heading text-3xl sm:text-3xl md:text-6xl leading-[1.1]"

@@ -46,7 +46,7 @@ export default function GithubRedirectCard() {
         </Link>
       </CardFooter>
       <div
-        className={`h-1 bg-gradient-to-r from-red-500 to-red-500 transition-all duration-300 ease-out ${
+        className={`h-1 bg-linear-to-r from-red-500 to-red-500 transition-all duration-300 ease-out ${
           isHovered ? "opacity-100" : "opacity-0"
         }`}
       ></div>

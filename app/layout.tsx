@@ -110,9 +110,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontHeading.variable
         )}
       >
+        <div className="top-[100px] right-[200px] fixed w-[100px] h-[700px] bg-slate-800/80 opacity-50 blur-[70px] rotate-[-30deg] pointer-events-none"></div>
+        <div className="bottom-[-200px] left-[-200px] fixed w-[500px] h-[500px] rounded-full bg-slate-800/80 opacity-50 blur-[70px] pointer-events-none"></div>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           themes={[
             "light",

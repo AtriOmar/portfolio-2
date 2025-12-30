@@ -47,6 +47,7 @@ import {
   SiBootstrap,
   SiCss3,
   SiExpress,
+  SiFacebook,
   SiGmail,
   SiGraphql,
   SiHtml5,
@@ -124,6 +125,7 @@ export const Icons = {
   gmail: SiGmail,
   twitter: SiX,
   linkedin: SiLinkedin,
+  facebook: SiFacebook,
   userFill: BiSolidUser,
   work: HiBriefcase,
   gitHub: ({ ...props }: LucideProps) => (

@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Norican } from "next/font/google";
+import { Permanent_Marker } from "next/font/google";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegment } from "next/navigation";
 import * as React from "react";
 
 import { Icons } from "@/components/common/icons";
 import { MobileNav } from "@/components/common/mobile-nav";
+import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -16,11 +17,10 @@ interface MainNavProps {
   children?: React.ReactNode;
 }
 
-const norican = Norican({
+const permanentMarker = Permanent_Marker({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
-  display: "swap",
 });
 
 // Animation variants for the navigation items
@@ -47,58 +47,104 @@ export function MainNav({ items, children }: MainNavProps) {
   }, [pathname]);
 
   return (
-    <div className="flex gap-6 md:gap-10">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Link href="/" className="hidden items-center space-x-2 md:flex">
-          <span className={cn(norican.className, "text-2xl")}>
-            {siteConfig.authorName}
-          </span>
-        </Link>
-      </motion.div>
-      {items?.length ? (
-        <nav className="hidden gap-6 md:flex items-center">
-          {items?.map((item, index) => (
-            <motion.div
-              key={index}
-              custom={index}
-              initial="hidden"
-              animate="visible"
-              variants={navItemVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                href={item.disabled ? "#" : item.href}
-                className={cn(
-                  "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
-                  item.href.startsWith(`/${segment}`)
-                    ? "text-foreground"
-                    : "text-foreground/60",
-                  item.disabled && "cursor-not-allowed opacity-80"
-                )}
-              >
-                {item.title}
-              </Link>
-            </motion.div>
-          ))}
+    <header className="z-50 container">
+      <div className="flex justify-between items-center h-20 py-6">
+        <div className="flex gap-6 md:gap-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link href="/" className="hidden md:flex items-center space-x-2">
+              <span className={cn(permanentMarker.className, "text-2xl")}>
+                {siteConfig.authorName}
+              </span>
+            </Link>
+          </motion.div>
+          {items?.length ? (
+            <nav className="hidden md:flex items-center gap-6">
+              {items?.map((item, index) => (
+                <motion.div
+                  key={index}
+                  custom={index}
+                  initial="hidden"
+                  animate="visible"
+                  variants={navItemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    href={item.disabled ? "#" : item.href}
+                    className={cn(
+                      "flex items-center font-medium hover:text-foreground/80 sm:text-sm text-lg transition-colors",
+                      item.href.startsWith(`/${segment}`)
+                        ? "text-foreground"
+                        : "text-foreground/60",
+                      item.disabled && "cursor-not-allowed opacity-80"
+                    )}
+                  >
+                    {item.title}
+                  </Link>
+                </motion.div>
+              ))}
+            </nav>
+          ) : null}
+          <motion.button
+            className="md:hidden flex items-center space-x-2"
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {showMobileMenu ? <Icons.close /> : <Icons.menu />}
+            <span className="font-bold">Menu</span>
+          </motion.button>
+          {showMobileMenu && items && (
+            <MobileNav items={items}>{children}</MobileNav>
+          )}
+        </div>
+
+        <nav className="flex items-center gap-5">
+          <Link
+            href={"https://github.com/AtriOmar"}
+            target="_blank"
+            className={cn(
+              buttonVariants({
+                variant: "ghost",
+                size: "sm",
+              }),
+              "h-8 w-8 px-0"
+            )}
+          >
+            <Icons.gitHub className="w-5 h-5" />
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/omar-atri"}
+            target="_blank"
+            className={cn(
+              buttonVariants({
+                variant: "ghost",
+                size: "sm",
+              }),
+              "h-8 w-8 px-0"
+            )}
+          >
+            <Icons.linkedin className="w-5 h-5" />
+          </Link>
+          <Link
+            href={"https://www.facebook.com/omar.atri.01"}
+            target="_blank"
+            className={cn(
+              buttonVariants({
+                variant: "ghost",
+                size: "sm",
+              }),
+              "h-8 w-8 px-0"
+            )}
+          >
+            <Icons.facebook className="w-5 h-5" />
+          </Link>
         </nav>
-      ) : null}
-      <motion.button
-        className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        {showMobileMenu ? <Icons.close /> : <Icons.menu />}
-        <span className="font-bold">Menu</span>
-      </motion.button>
-      {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
-      )}
-    </div>
+      </div>
+    </header>
   );
 }

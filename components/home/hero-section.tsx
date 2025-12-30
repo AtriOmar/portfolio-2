@@ -31,10 +31,10 @@ export function HeroSection() {
           />
         </div>
       </div>
-      <div className="flex flex-col items-center gap-4 max-w-5xl -mt-20 text-center container">
+      <div className="flex flex-col items-center gap-4 max-w-5xl -mt-20 px-0! text-center container">
         <ElectricBorder
           color="red"
-          className="w-[60%] max-w-[16rem] aspect-square"
+          className="w-full sm:w-[60%] max-w-[16rem] aspect-square"
           borderRadius={9999}
           chaos={0.05}
         >
@@ -63,30 +63,34 @@ export function HeroSection() {
           Full Stack JS Developer
         </AnimatedText>
 
-        <div className="flex sm:flex-row flex-col justify-center items-center gap-3 sm:space-x-4 mt-10">
+        <div className="flex sm:flex-row flex-col justify-center sm:items-center gap-3 sm:space-x-4 w-full mt-10">
           <AnimatedText delay={0.6}>
             <Link
               href={"https://github.com/AtriOmar"}
               target="_blank"
-              className={cn(buttonVariants({ size: "lg" }))}
-              aria-label="View Naman Barkiya's GitHub profile"
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "w-full max-w-80 sm:w-auto"
+              )}
+              aria-label="View Omar Atri's GitHub profile"
             >
               <Icons.gitHub className="w-4 h-4 mr-2" /> GitHub
             </Link>
           </AnimatedText>
           <AnimatedText delay={0.8}>
             <Link
-              href={"/contact"}
-              rel="noreferrer"
+              href={"https://linkedin.com/in/omar-atri"}
+              target="_blank"
               className={cn(
                 buttonVariants({
                   variant: "outline",
                   size: "lg",
-                })
+                }),
+                "w-full max-w-80 sm:w-auto"
               )}
-              aria-label="Contact Omar Atri"
+              aria-label="View Omar Atri's LinkedIn profile"
             >
-              <Icons.contact className="w-4 h-4 mr-2" /> Contact
+              <Icons.linkedin className="w-4 h-4 mr-2" /> LinkedIn
             </Link>
           </AnimatedText>
         </div>

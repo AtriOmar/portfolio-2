@@ -5,34 +5,49 @@ import Link from "next/link";
 
 import { AnimatedText } from "@/components/common/animated-text";
 import { Icons } from "@/components/common/icons";
-import Orb from "@/components/Orb";
 import { buttonVariants } from "@/components/ui/button";
+import ElectricBorder from "@/components/ui/electric-border";
+import Orb from "@/components/ui/orb";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
+import { useRef } from "react";
 
 export function HeroSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
   return (
-    <section className="relative flex items-center space-y-6 h-screen mb-0 md:py-20 lg:py-32 pt-6 pb-8 md:pb-12">
-      <div className="top-1/2 left-1/2 absolute -translate-x-1/2 -translate-y-[calc(50%+40px)]">
-        <div className="relative size-[900px]">
+    <section
+      ref={sectionRef}
+      className="relative flex items-center space-y-6 h-screen mb-0 md:py-20 lg:py-32 pt-6 pb-8 md:pb-12"
+    >
+      <div className="top-1/2 left-1/2 -z-1 absolute size-[900px] -translate-x-1/2 -translate-y-[calc(50%+40px)]">
+        <div className="relative size-full">
           <Orb
             hoverIntensity={0.5}
             rotateOnHover={true}
             hue={0}
             forceHoverState={false}
+            containerRef={sectionRef}
           />
         </div>
       </div>
       <div className="flex flex-col items-center gap-4 max-w-5xl -mt-20 text-center container">
-        <Image
-          src={profileImg}
-          height={100}
-          width={100}
-          sizes="100vw"
-          className="w-[60%] max-w-[16rem] h-auto mb-0 md:mb-2 p-1 border-6 border-red-700 rounded-full"
-          alt="Omar Atri - Full Stack Developer Portfolio"
-          priority
-        />
+        <ElectricBorder
+          color="red"
+          className="w-[60%] max-w-[16rem] aspect-square"
+          borderRadius={9999}
+          chaos={0.05}
+        >
+          <Image
+            src={profileImg}
+            height={100}
+            width={100}
+            sizes="100vw"
+            className="size-full mb-0 md:mb-2 p-3 border-red-700 rounded-full"
+            alt="Omar Atri - Full Stack Developer Portfolio"
+            priority
+          />
+        </ElectricBorder>
         <AnimatedText
           as="h1"
           delay={0.2}

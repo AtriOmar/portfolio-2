@@ -80,7 +80,7 @@ export default function IndexPage() {
             height={100}
             width={100}
             sizes="100vw"
-            className="w-[60%] max-w-[16rem] h-auto mb-0 md:mb-2 border-6 border-red-700 rounded-full bg-primary"
+            className="w-[60%] max-w-[16rem] h-auto mb-0 md:mb-2 p-1 border-6 border-red-700 rounded-full"
             alt="Omar Atri- Full Stack Developer Portfolio"
             priority
           />

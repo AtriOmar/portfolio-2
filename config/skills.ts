@@ -2,8 +2,8 @@ import { Icons } from "@/components/common/icons";
 
 export interface skillsInterface {
   name: string;
-  description: string;
-  level: string;
+  description?: string;
+  level: "Advanced" | "Intermediate" | "Basic";
   icon: any;
 }
 
@@ -23,21 +23,7 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: Icons.react,
   },
   {
-    name: "GraphQL",
-    description:
-      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
-    level: "Advanced",
-    icon: Icons.graphql,
-  },
-  {
-    name: "Nest.js",
-    description:
-      "Create scalable and modular applications with a progressive Node.js framework.",
-    level: "Advanced",
-    icon: Icons.nestjs,
-  },
-  {
-    name: "express.js",
+    name: "Express.js",
     description:
       "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
     level: "Advanced",
@@ -89,21 +75,14 @@ export const skillsUnsorted: skillsInterface[] = [
     name: "React Native",
     description:
       "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
-    level: "Advanced",
+    level: "Basic",
     icon: Icons.react,
-  },
-  {
-    name: "Angular",
-    description:
-      "Build dynamic web apps with a TypeScript-based open-source framework by Google.",
-    level: "Intermediate",
-    icon: Icons.angular,
   },
   {
     name: "Redux",
     description:
       "Manage app state effectively using a predictable and centralized state container.",
-    level: "Advanced",
+    level: "Intermediate",
     icon: Icons.redux,
   },
   {
@@ -113,14 +92,6 @@ export const skillsUnsorted: skillsInterface[] = [
     level: "Intermediate",
     icon: Icons.socketio,
   },
-  {
-    name: "Material UI",
-    description:
-      "Create stunning and responsive UIs with a popular React UI framework.",
-    level: "Advanced",
-    icon: Icons.mui,
-  },
-
   {
     name: "Tailwind CSS",
     description:
@@ -132,40 +103,66 @@ export const skillsUnsorted: skillsInterface[] = [
     name: "AWS",
     description:
       "Utilize Amazon Web Services to build and deploy scalable, reliable, and secure applications.",
-    level: "Intermediate",
-    icon: Icons.amazonaws,
-  },
-  {
-    name: "Bootstrap",
-    description:
-      "Quickly create responsive and appealing web designs using a popular CSS framework.",
     level: "Basic",
-    icon: Icons.bootstrap,
+    icon: Icons.amazonaws,
   },
   {
     name: "MySQL",
     description:
       "Manage and organize relational databases efficiently for data-driven applications.",
+    level: "Advanced",
+    icon: Icons.mysql,
+  },
+  {
+    name: "Shopify API",
     level: "Basic",
     icon: Icons.mysql,
   },
   {
-    name: "Netlify",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
+    name: "Stripe",
+    level: "Intermediate",
+    icon: Icons.mysql,
+  },
+  {
+    name: "Shadcn",
     level: "Advanced",
-    icon: Icons.netlify,
+    icon: Icons.mysql,
+  },
+  {
+    name: "Cloudflare",
+    level: "Basic",
+    icon: Icons.mysql,
+  },
+  {
+    name: "Docker",
+    level: "Basic",
+    icon: Icons.mysql,
+  },
+  {
+    name: "Nginx",
+    level: "Intermediate",
+    icon: Icons.mysql,
+  },
+  {
+    name: "OpenLiteSpeed",
+    level: "Advanced",
+    icon: Icons.mysql,
+  },
+  {
+    name: "Gatsby",
+    level: "Advanced",
+    icon: Icons.mysql,
   },
 ];
 
 const levelOrder = { Advanced: 3, Intermediate: 2, Basic: 1 };
 
-export const skills = skillsUnsorted
-  .slice()
-  .sort(
-    (a, b) =>
-      levelOrder[b.level as keyof typeof levelOrder] -
-      levelOrder[a.level as keyof typeof levelOrder]
-  );
+export const skills = skillsUnsorted;
+// .slice()
+// .sort(
+//   (a, b) =>
+//     levelOrder[b.level as keyof typeof levelOrder] -
+//     levelOrder[a.level as keyof typeof levelOrder]
+// );
 
-export const featuredSkills = skills.slice(0, 6);
+export const featuredSkills = skills.slice(0, 9);

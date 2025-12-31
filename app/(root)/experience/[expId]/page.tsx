@@ -26,12 +26,13 @@ const getYearFromDate = (date: Date): string => {
 
 // Helper function to get duration text
 const getDurationText = (
-  startDate: Date,
-  endDate: Date | "Present"
+  startDate: Date | string,
+  endDate: Date | string
 ): string => {
-  const startYear = getYearFromDate(startDate);
+  const startYear =
+    typeof startDate === "string" ? startDate : getYearFromDate(startDate);
   const endYear =
-    typeof endDate === "string" ? "Present" : getYearFromDate(endDate);
+    typeof endDate === "string" ? endDate : getYearFromDate(endDate);
   return `${startYear} - ${endYear}`;
 };
 
@@ -73,16 +74,16 @@ export default async function ExperienceDetailPage({
       content: (
         <AnimatedSection delay={0.3}>
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            <h3 className="mb-4 font-semibold text-muted-foreground text-sm uppercase tracking-wide">
               Role Summary
             </h3>
             <ul className="space-y-3">
               {experience.description.map((desc, idx) => (
                 <li
                   key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
+                  className="flex items-start gap-3 text-base leading-relaxed"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 mt-2 rounded-full bg-primary shrink-0" />
                   {desc}
                 </li>
               ))}
@@ -97,16 +98,16 @@ export default async function ExperienceDetailPage({
       content: (
         <AnimatedSection delay={0.3}>
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            <h3 className="mb-4 font-semibold text-muted-foreground text-sm uppercase tracking-wide">
               Key Achievements
             </h3>
             <ul className="space-y-3">
               {experience.achievements.map((achievement, idx) => (
                 <li
                   key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
+                  className="flex items-start gap-3 text-base leading-relaxed"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 mt-2 rounded-full bg-primary shrink-0" />
                   {achievement}
                 </li>
               ))}
@@ -121,11 +122,11 @@ export default async function ExperienceDetailPage({
       content: (
         <AnimatedSection delay={0.3}>
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            <h3 className="mb-4 font-semibold text-muted-foreground text-sm uppercase tracking-wide">
               Technologies & Skills
             </h3>
             <ChipContainer textArr={experience.skills} />
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-4 text-muted-foreground text-sm">
               These are the primary technologies and skills utilized during my
               time at {experience.company}.
             </p>
@@ -137,24 +138,24 @@ export default async function ExperienceDetailPage({
 
   return (
     <ClientPageWrapper>
-      <div className="container max-w-4xl mx-auto py-8 px-4">
+      <div className="max-w-4xl mx-auto px-4 py-8 container">
         <AnimatedSection className="mb-6">
           <Button variant="ghost" size="sm" className="mb-4" asChild>
             <Link href="/experience">
-              <Icons.chevronLeft className="mr-2 h-4 w-4" />
+              <Icons.chevronLeft className="w-4 h-4 mr-2" />
               Back to Experience
             </Link>
           </Button>
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <Card className="overflow-hidden rounded-lg border bg-background p-2 transition-all duration-300">
+          <Card className="overflow-hidden p-2 border rounded-lg bg-background transition-all duration-300">
             <CardHeader className="pb-6">
               <div className="flex flex-col gap-4">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+                <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center gap-4">
+                  <div className="flex sm:flex-row flex-col items-center sm:items-start gap-4">
                     {experience.logo && (
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg border-2 border-border overflow-hidden bg-white shrink-0">
+                      <div className="w-16 sm:w-20 h-16 sm:h-20 overflow-hidden border-2 border-border rounded-lg bg-white shrink-0">
                         <Image
                           src={experience.logo}
                           alt={experience.company}
@@ -164,12 +165,12 @@ export default async function ExperienceDetailPage({
                         />
                       </div>
                     )}
-                    <div className="flex-1 text-center sm:text-left">
-                      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                    <div className="flex-1 sm:text-left text-center">
+                      <h1 className="mb-2 font-bold text-xl sm:text-2xl md:text-3xl">
                         {experience.position}
                       </h1>
-                      <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
-                        <span className="text-md font-medium text-muted-foreground">
+                      <div className="flex justify-center sm:justify-start items-center gap-2 mb-2">
+                        <span className="font-medium text-md text-muted-foreground">
                           {experience.company}
                         </span>
                         {experience.companyUrl && (
@@ -189,7 +190,7 @@ export default async function ExperienceDetailPage({
                     </div>
                   </div>
                   <div className="flex justify-center sm:justify-end">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
+                    <span className="inline-flex items-center px-3 py-1 border border-primary/20 rounded-full bg-primary/10 font-medium text-primary text-sm">
                       {getDurationText(
                         experience.startDate,
                         experience.endDate
@@ -209,7 +210,7 @@ export default async function ExperienceDetailPage({
         <AnimatedSection delay={0.4} className="flex justify-center mt-8">
           <Button variant="outline" asChild>
             <Link href="/experience">
-              <Icons.chevronLeft className="mr-2 h-4 w-4" />
+              <Icons.chevronLeft className="w-4 h-4 mr-2" />
               View All Experience
             </Link>
           </Button>

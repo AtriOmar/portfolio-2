@@ -12,7 +12,7 @@ export function ExperienceSection() {
   return (
     <AnimatedSection
       direction="left"
-      className="space-y-6 my-14 py-10 container"
+      className="space-y-6 my-14 px-0! py-10 container"
       id="experience"
     >
       <div className="flex flex-col items-center space-y-4 max-w-232 mx-auto text-center">

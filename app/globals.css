@@ -25,6 +25,10 @@
     @apply border-border;
   }
 
+  button {
+    @apply cursor-pointer;
+  }
+
   html,
   body {
     overflow-x: hidden;
@@ -106,7 +110,7 @@
 }
 
 @theme {
-  --container-padding: 2rem;
+  --container-padding: 1rem;
   --container-2xl: 1400px;
 
   --color-border: var(--border);

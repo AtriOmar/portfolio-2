@@ -5,22 +5,20 @@ import Link from "next/link";
 import React from "react";
 
 import { Icons } from "@/components/common/icons";
-import { Button } from "@/components/ui/button";
 import { ExperienceInterface } from "@/config/experience";
 
-// Helper function to extract year from date
 const getYearFromDate = (date: Date): string => {
   return new Date(date).getFullYear().toString();
 };
 
-// Helper function to get duration text
 const getDurationText = (
-  startDate: Date,
-  endDate: Date | "Present"
+  startDate: Date | string,
+  endDate: Date | string
 ): string => {
-  const startYear = getYearFromDate(startDate);
+  const startYear =
+    typeof startDate === "string" ? startDate : getYearFromDate(startDate);
   const endYear =
-    typeof endDate === "string" ? "Present" : getYearFromDate(endDate);
+    typeof endDate === "string" ? endDate : getYearFromDate(endDate);
   return `${startYear} - ${endYear}`;
 };
 
@@ -30,10 +28,23 @@ interface ExperienceCardProps {
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
-    <div className="group relative overflow-hidden rounded-lg border bg-background p-4 sm:p-6 transition-all duration-300">
-      <div className="flex items-start gap-3 sm:gap-4">
+    <Link
+      href={`/experience/${experience.id}`}
+      className="group block relative overflow-hidden p-4 sm:p-6 border hover:border-primary/40 rounded-lg bg-background hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
+    >
+      {/* Gradient overlay (bottom → top) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+      {/* Bottom CTA inside gradient */}
+      <div className="right-3 bottom-3 z-10 absolute flex items-center gap-1 opacity-0 group-hover:opacity-100 font-medium text-white text-sm transition-all group-hover:translate-y-0 duration-300 pointer-events-none">
+        View details
+        <Icons.chevronRight className="w-4 h-4" />
+      </div>
+
+      {/* Content */}
+      <div className="z-10 relative flex items-start gap-3 sm:gap-4">
         {experience.logo && (
-          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border-2 border-border overflow-hidden bg-white shrink-0">
+          <div className="w-10 sm:w-12 h-10 sm:h-12 border rounded-lg bg-white shrink-0">
             <Image
               src={experience.logo}
               alt={experience.company}
@@ -43,68 +54,60 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             />
           </div>
         )}
+
         <div className="flex-1 min-w-0">
           <div className="flex flex-col gap-1 sm:gap-2">
             <div className="flex items-start sm:items-center gap-2">
-              <h3 className="text-base sm:text-lg font-bold text-foreground line-clamp-2 sm:line-clamp-1">
+              <h3 className="font-bold text-base sm:text-lg line-clamp-2 sm:line-clamp-1">
                 {experience.position}
               </h3>
-              {experience.companyUrl && (
+
+              {/* {experience.companyUrl && (
                 <a
                   href={experience.companyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-foreground transition-colors shrink-0 mt-0.5 sm:mt-0"
+                  onClick={(e) => e.stopPropagation()}
+                  className="mt-0.5 text-muted-foreground hover:text-foreground shrink-0"
                 >
                   <Icons.externalLink className="w-4 h-4" />
                 </a>
-              )}
+              )} */}
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm text-muted-foreground">
+
+            <div className="flex sm:flex-row flex-col sm:items-center gap-1 sm:gap-2 text-muted-foreground text-sm">
               <span className="font-medium">{experience.company}</span>
               <span className="hidden sm:inline">•</span>
               <span>{experience.location}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
-                {getDurationText(experience.startDate, experience.endDate)}
-              </span>
-            </div>
+
+            <span className="inline-flex items-center w-fit px-2 py-1 border border-primary/20 rounded-full bg-primary/10 font-medium text-primary text-xs">
+              {getDurationText(experience.startDate, experience.endDate)}
+            </span>
           </div>
-          <p className="mt-2 sm:mt-3 text-sm text-muted-foreground line-clamp-2">
+
+          <p className="mt-2 sm:mt-3 text-muted-foreground text-sm line-clamp-2">
             {experience.description[0]}
           </p>
-          <div className="mt-3 sm:mt-4 flex flex-wrap gap-1">
+
+          <div className="flex flex-wrap gap-1 mt-3 sm:mt-4">
             {experience.skills.slice(0, 2).map((skill, index) => (
               <span
                 key={index}
-                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground"
+                className="px-2 py-1 rounded-md bg-muted font-medium text-muted-foreground text-xs"
               >
                 {skill}
               </span>
             ))}
             {experience.skills.length > 2 && (
-              <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground">
+              <span className="px-2 py-1 rounded-md bg-muted font-medium text-muted-foreground text-xs">
                 +{experience.skills.length - 2} more
               </span>
             )}
           </div>
         </div>
       </div>
-      <div className="mt-3 sm:mt-4 flex justify-end">
-        <Button
-          variant="outline"
-          size="sm"
-          className="rounded-lg w-full sm:w-auto"
-          asChild
-        >
-          <Link href={`/experience/${experience.id}`}>
-            View Details
-            <Icons.chevronRight className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
-      </div>
-    </div>
+    </Link>
   );
 };
 

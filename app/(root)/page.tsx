@@ -10,7 +10,7 @@ import { pagesConfig } from "@/config/pages";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: `${pagesConfig.home.metadata.title} | Modern Next.js Developer Portfolio Template`,
+  title: `${pagesConfig.home.metadata.title}`,
   description: `${pagesConfig.home.metadata.description} This open-source Next.js portfolio template is customizable to showcase your skills and projects.`,
   alternates: {
     canonical: siteConfig.url,
@@ -63,9 +63,9 @@ export default function IndexPage() {
 
       <HeroSection />
       <SkillsSection />
+      <ExperienceSection />
       <ProjectsSection />
       {/* <ContributionsSection /> */}
-      <ExperienceSection />
     </ClientPageWrapper>
   );
 }

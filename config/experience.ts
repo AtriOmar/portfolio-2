@@ -5,8 +5,8 @@ export interface ExperienceInterface {
   position: string;
   company: string;
   location: string;
-  startDate: Date;
-  endDate: Date | "Present";
+  startDate: Date | string;
+  endDate: Date | string;
   description: string[];
   achievements: string[];
   skills: ValidSkills[];
@@ -16,12 +16,12 @@ export interface ExperienceInterface {
 
 export const experiences: ExperienceInterface[] = [
   {
-    id: "ubs",
-    position: "Software Development Engineer",
-    company: "UBS",
-    location: "Mumbai, India",
-    startDate: new Date("2024-08-01"),
-    endDate: "Present",
+    id: "onrtech",
+    position: "Web Developer Intern",
+    company: "ONRTECH",
+    location: "France (Remote)",
+    startDate: "June 2025",
+    endDate: "August 2025",
     description: [
       "Contributing to the P&L dashboard used by traders and senior stakeholders.",
       "Leading the migration of the UI from Kendo to UBS's internal design system.",
@@ -35,16 +35,16 @@ export const experiences: ExperienceInterface[] = [
       "Collaborated closely with product owners and designers for user-centric features, improving usability and trader workflows.",
     ],
     skills: ["Typescript", "React", "Databricks", "Java", "Python"],
-    companyUrl: "https://www.ubs.com",
-    logo: "/logo.png",
+    companyUrl: "https://onrtech.fr",
+    logo: "/experience/onrtech-logo.png",
   },
   {
-    id: "agentprod",
-    position: "Software Development Intern",
-    company: "Agentprod LLP",
-    location: "Bengaluru, India",
-    startDate: new Date("2023-10-01"),
-    endDate: new Date("2024-03-01"),
+    id: "securas",
+    position: "Web Developer Intern",
+    company: "SECURAS Technologies",
+    location: "Sfax, Tunisia",
+    startDate: "July 2024",
+    endDate: "August 2024",
     description: [
       "Built backend for AI-driven chatbots using LLMs (GPT-4, Llama-2).",
       "Developed APIs and integrated Slack, Google Workspace, and HubSpot automations.",
@@ -57,36 +57,7 @@ export const experiences: ExperienceInterface[] = [
       "Created a Next.js dashboard for user analytics.",
     ],
     skills: ["Next.js", "React", "Node.js", "AWS", "MongoDB", "Typescript"],
-    companyUrl: "https://agentprod.com",
-    logo: "/experience/agentprod-logo.png",
-  },
-  {
-    id: "builtdesign",
-    position: "Web Developer Intern",
-    company: "Builtdesign",
-    location: "Nagpur, India",
-    startDate: new Date("2021-07-01"),
-    endDate: new Date("2022-07-01"),
-    description: [
-      "Developed websites using React, Angular, and GraphQL.",
-      "Set up AWS servers and CI/CD pipelines.",
-      "Built a multi-page PDF reader for large files (>300MB).",
-    ],
-    achievements: [
-      "Developed websites using React, Angular, and GraphQL; reduced API load time by 30%.",
-      "Set up AWS servers and CI/CD pipelines, scaling traffic to 3,000+ users/day.",
-      "Built a multi-page PDF reader for large files (>300MB) to boost user engagement.",
-    ],
-    skills: [
-      "React",
-      "Angular",
-      "GraphQL",
-      "AWS",
-      "HTML 5",
-      "CSS 3",
-      "Javascript",
-    ],
-    companyUrl: "https://builtdesign.in",
-    logo: "/experience/builtdesign-logo.png",
+    companyUrl: "https://securas.fr/fr/",
+    logo: "/experience/securas-logo.png",
   },
 ];

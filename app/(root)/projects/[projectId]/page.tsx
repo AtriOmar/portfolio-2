@@ -18,7 +18,11 @@ interface ProjectPageProps {
   }>;
 }
 
-const githubUsername = "namanbarkiya";
+export function generateStaticParams() {
+  return Projects.map((project) => ({
+    projectId: project.id,
+  }));
+}
 
 export default async function Project({ params }: ProjectPageProps) {
   const { projectId } = await params;
@@ -28,7 +32,7 @@ export default async function Project({ params }: ProjectPageProps) {
   }
 
   return (
-    <article className="container relative max-w-3xl py-6 lg:py-10">
+    <article className="relative max-w-3xl py-6 lg:py-10 container">
       <Link
         href="/projects"
         className={cn(
@@ -36,17 +40,17 @@ export default async function Project({ params }: ProjectPageProps) {
           "absolute left-[-200px] top-14 hidden xl:inline-flex"
         )}
       >
-        <Icons.chevronLeft className="mr-2 h-4 w-4" />
+        <Icons.chevronLeft className="w-4 h-4 mr-2" />
         All Projects
       </Link>
       <div>
         <time
           dateTime={Date.now().toString()}
-          className="block text-sm text-muted-foreground"
+          className="block text-muted-foreground text-sm"
         >
           {formatDateFromObj(project.startDate)}
         </time>
-        <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
+        <h1 className="flex justify-between items-center mt-2 font-heading text-4xl lg:text-5xl leading-tight">
           {project.companyName}
           <div className="flex items-center">
             {project.githubLink && (
@@ -59,14 +63,14 @@ export default async function Project({ params }: ProjectPageProps) {
             {project.websiteLink && (
               <CustomTooltip text="Please note that some project links may be temporarily unavailable.">
                 <Link href={project.websiteLink} target="_blank">
-                  <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
+                  <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
                 </Link>
               </CustomTooltip>
             )}
           </div>
         </h1>
         <ChipContainer textArr={project.category} />
-        <div className="mt-4 flex space-x-4">
+        <div className="flex space-x-4 mt-4">
           <Link
             href={siteConfig.links.github}
             className="flex items-center space-x-2 text-sm"
@@ -94,19 +98,19 @@ export default async function Project({ params }: ProjectPageProps) {
         alt={project.companyName}
         width={720}
         height={405}
-        className="my-8 rounded-md border bg-muted transition-colors"
+        className="my-8 border rounded-md bg-muted transition-colors"
         priority
       />
 
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
+      <div className="mb-7">
+        <h2 className="inline-block mb-2 font-heading text-3xl lg:text-3xl leading-tight">
           Tech Stack
         </h2>
         <ChipContainer textArr={project.techStack} />
       </div>
 
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
+      <div className="mb-7">
+        <h2 className="inline-block mb-2 font-heading text-3xl lg:text-3xl leading-tight">
           Description
         </h2>
         {/* {<project.descriptionComponent />} */}
@@ -116,14 +120,14 @@ export default async function Project({ params }: ProjectPageProps) {
         />
       </div>
 
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
+      <div className="mb-7">
+        <h2 className="inline-block mb-5 font-heading text-3xl lg:text-3xl leading-tight">
           Page Info
         </h2>
         {project.pagesInfoArr.map((page, ind) => (
           <div key={ind}>
-            <h3 className="flex items-center font-heading text-xl leading-tight lg:text-xl mt-3">
-              <Icons.star className="h-5 w-5 mr-2" /> {page.title}
+            <h3 className="flex items-center mt-3 font-heading text-xl lg:text-xl leading-tight">
+              <Icons.star className="w-5 h-5 mr-2" /> {page.title}
             </h3>
             <div>
               <p>{page.description}</p>
@@ -134,7 +138,7 @@ export default async function Project({ params }: ProjectPageProps) {
                   alt={img}
                   width={720}
                   height={405}
-                  className="my-4 rounded-md border bg-muted transition-colors"
+                  className="my-4 border rounded-md bg-muted transition-colors"
                   priority
                 />
               ))}
@@ -149,7 +153,7 @@ export default async function Project({ params }: ProjectPageProps) {
           href="/projects"
           className={cn(buttonVariants({ variant: "ghost" }))}
         >
-          <Icons.chevronLeft className="mr-2 h-4 w-4" />
+          <Icons.chevronLeft className="w-4 h-4 mr-2" />
           All Projects
         </Link>
       </div>

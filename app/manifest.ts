@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Naman Barkiya Portfolio",
-    short_name: "Naman's Portfolio",
+    name: "Omar Atri Portfolio",
+    short_name: "Omar's Portfolio",
     description:
-      "Naman Barkiya's modern developer portfolio built with Next.js - available as an open-source template",
+      "Omar Atri's modern developer portfolio built with Next.js - available as an open-source template",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -38,3 +38,5 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: "/",
   };
 }
+
+export const dynamic = "force-static";

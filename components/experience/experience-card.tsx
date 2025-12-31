@@ -87,7 +87,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
           </div>
 
           <p className="mt-2 sm:mt-3 text-muted-foreground text-sm line-clamp-2">
-            {experience.description[0]}
+            {experience.summary}
           </p>
 
           <div className="flex flex-wrap gap-1 mt-3 sm:mt-4">

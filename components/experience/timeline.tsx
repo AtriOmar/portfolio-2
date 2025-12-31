@@ -102,7 +102,7 @@ export default function Timeline({ experiences }: TimelineProps) {
                     </p>
 
                     <p className="text-muted-foreground text-sm line-clamp-2">
-                      {experience.description[0]}
+                      {experience.summary}
                     </p>
                   </div>
                 </div>

@@ -9,7 +9,6 @@ import { Icons } from "@/components/common/icons";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import ChipContainer from "@/components/ui/chip-container";
-import { ResponsiveTabs } from "@/components/ui/responsive-tabs";
 import { experiences } from "@/config/experience";
 import { siteConfig } from "@/config/site";
 
@@ -72,75 +71,6 @@ export default async function ExperienceDetailPage({
   if (!experience) {
     redirect("/experience");
   }
-
-  const tabItems = [
-    {
-      value: "summary",
-      label: "Summary",
-      content: (
-        <AnimatedSection delay={0.3}>
-          <div>
-            <h3 className="mb-4 font-semibold text-muted-foreground text-sm uppercase tracking-wide">
-              Role Summary
-            </h3>
-            <ul className="space-y-3">
-              {experience.description.map((desc, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-3 text-base leading-relaxed"
-                >
-                  <span className="w-1.5 h-1.5 mt-2 rounded-full bg-primary shrink-0" />
-                  {desc}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </AnimatedSection>
-      ),
-    },
-    {
-      value: "achievements",
-      label: "Achievements",
-      content: (
-        <AnimatedSection delay={0.3}>
-          <div>
-            <h3 className="mb-4 font-semibold text-muted-foreground text-sm uppercase tracking-wide">
-              Key Achievements
-            </h3>
-            <ul className="space-y-3">
-              {experience.achievements.map((achievement, idx) => (
-                <li
-                  key={idx}
-                  className="flex items-start gap-3 text-base leading-relaxed"
-                >
-                  <span className="w-1.5 h-1.5 mt-2 rounded-full bg-primary shrink-0" />
-                  {achievement}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </AnimatedSection>
-      ),
-    },
-    {
-      value: "skills",
-      label: "Skills",
-      content: (
-        <AnimatedSection delay={0.3}>
-          <div>
-            <h3 className="mb-4 font-semibold text-muted-foreground text-sm uppercase tracking-wide">
-              Technologies & Skills
-            </h3>
-            <ChipContainer textArr={experience.skills} />
-            <p className="mt-4 text-muted-foreground text-sm">
-              These are the primary technologies and skills utilized during my
-              time at {experience.company}.
-            </p>
-          </div>
-        </AnimatedSection>
-      ),
-    },
-  ];
 
   return (
     <ClientPageWrapper>
@@ -207,8 +137,31 @@ export default async function ExperienceDetailPage({
               </div>
             </CardHeader>
 
-            <CardContent>
-              <ResponsiveTabs items={tabItems} defaultValue="summary" />
+            <CardContent className="space-y-6">
+              <AnimatedSection delay={0.3}>
+                <div>
+                  <h3 className="mb-4 font-semibold text-muted-foreground text-sm uppercase tracking-wide">
+                    Role Overview
+                  </h3>
+                  <div
+                    className="max-w-none [&>li]:mb-2 [&>p]:mb-4 [&>ul]:pl-6 [&>strong]:font-semibold text-base leading-relaxed [&>ul]:list-disc prose prose-sm"
+                    dangerouslySetInnerHTML={{ __html: experience.description }}
+                  />
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.4}>
+                <div>
+                  <h3 className="mb-4 font-semibold text-muted-foreground text-sm uppercase tracking-wide">
+                    Technologies & Skills
+                  </h3>
+                  <ChipContainer textArr={experience.skills} />
+                  <p className="mt-4 text-muted-foreground text-sm">
+                    These are the primary technologies and skills utilized
+                    during my time at {experience.company}.
+                  </p>
+                </div>
+              </AnimatedSection>
             </CardContent>
           </Card>
         </AnimatedSection>

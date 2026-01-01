@@ -9,6 +9,13 @@ export interface skillsInterface {
 
 export const skillsUnsorted: skillsInterface[] = [
   {
+    name: "Typescript",
+    description:
+      "Enhance JavaScript with static types, making code more understandable and reliable.",
+    level: "Advanced",
+    icon: Icons.typescript,
+  },
+  {
     name: "Next.js",
     description:
       "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
@@ -16,11 +23,11 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: Icons.nextjs,
   },
   {
-    name: "React",
+    name: "Tailwind CSS",
     description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
+      "Design beautiful, modern websites faster with a utility-first CSS framework.",
     level: "Advanced",
-    icon: Icons.react,
+    icon: Icons.tailwindcss,
   },
   {
     name: "Express.js",
@@ -30,11 +37,11 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: Icons.express,
   },
   {
-    name: "Node.js",
+    name: "Socket.io",
     description:
-      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
+      "Enable real-time, bidirectional communication between clients and servers effortlessly.",
     level: "Advanced",
-    icon: Icons.nodejs,
+    icon: Icons.socketio,
   },
   {
     name: "MongoDB",
@@ -44,11 +51,18 @@ export const skillsUnsorted: skillsInterface[] = [
     icon: Icons.mongodb,
   },
   {
-    name: "Typescript",
+    name: "MySQL",
     description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
+      "Manage and organize relational databases efficiently for data-driven applications.",
     level: "Advanced",
-    icon: Icons.typescript,
+    icon: Icons.mysql,
+  },
+  {
+    name: "React",
+    description:
+      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
+    level: "Advanced",
+    icon: Icons.react,
   },
   {
     name: "Javascript",
@@ -71,13 +85,7 @@ export const skillsUnsorted: skillsInterface[] = [
     level: "Advanced",
     icon: Icons.css3,
   },
-  {
-    name: "React Native",
-    description:
-      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
-    level: "Basic",
-    icon: Icons.react,
-  },
+
   {
     name: "Redux",
     description:
@@ -85,20 +93,7 @@ export const skillsUnsorted: skillsInterface[] = [
     level: "Intermediate",
     icon: Icons.redux,
   },
-  {
-    name: "Socket.io",
-    description:
-      "Enable real-time, bidirectional communication between clients and servers effortlessly.",
-    level: "Intermediate",
-    icon: Icons.socketio,
-  },
-  {
-    name: "Tailwind CSS",
-    description:
-      "Design beautiful, modern websites faster with a utility-first CSS framework.",
-    level: "Advanced",
-    icon: Icons.tailwindcss,
-  },
+
   {
     name: "AWS",
     description:
@@ -106,52 +101,60 @@ export const skillsUnsorted: skillsInterface[] = [
     level: "Basic",
     icon: Icons.amazonaws,
   },
+
   {
-    name: "MySQL",
+    name: "Node.js",
     description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
+      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
     level: "Advanced",
-    icon: Icons.mysql,
+    icon: Icons.nodejs,
   },
   {
     name: "Shopify API",
     level: "Basic",
-    icon: Icons.mysql,
+    icon: Icons.shopify,
   },
   {
     name: "Stripe",
     level: "Intermediate",
-    icon: Icons.mysql,
+    icon: Icons.stripe,
   },
   {
     name: "Shadcn",
     level: "Advanced",
-    icon: Icons.mysql,
+    icon: Icons.shadcn,
   },
   {
     name: "Cloudflare",
     level: "Basic",
-    icon: Icons.mysql,
+    icon: Icons.cloudflare,
   },
   {
     name: "Docker",
     level: "Basic",
-    icon: Icons.mysql,
+    icon: Icons.docker,
   },
   {
     name: "Nginx",
     level: "Intermediate",
-    icon: Icons.mysql,
+    icon: Icons.nginx,
   },
   {
     name: "OpenLiteSpeed",
     level: "Advanced",
-    icon: Icons.mysql,
+    icon: Icons.openlitespeed,
   },
   {
     name: "Gatsby",
     level: "Advanced",
-    icon: Icons.mysql,
+    icon: Icons.gatsby,
+  },
+  {
+    name: "React Native",
+    description:
+      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
+    level: "Basic",
+    icon: Icons.react,
   },
 ];
 

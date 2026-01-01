@@ -144,7 +144,7 @@ export default async function ExperienceDetailPage({
                     Role Overview
                   </h3>
                   <div
-                    className="max-w-none [&>li]:mb-2 [&>p]:mb-4 [&>ul]:pl-6 [&>strong]:font-semibold text-base leading-relaxed [&>ul]:list-disc prose prose-sm"
+                    className="max-w-none [&>li]:mb-2 [&>p]:mb-4 [&>ul]:pl-6 prose-invert [&>strong]:font-semibold text-base leading-relaxed [&>ul]:list-disc prose"
                     dangerouslySetInnerHTML={{ __html: experience.description }}
                   />
                 </div>

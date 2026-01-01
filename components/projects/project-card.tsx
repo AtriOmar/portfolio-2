@@ -91,7 +91,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
           <p className="text-[13px] text-zinc-400 line-clamp-3 leading-relaxed">
-            {project.shortDescription}
+            {project.summary}
           </p>
 
           <div className="flex flex-wrap gap-2 pt-2">

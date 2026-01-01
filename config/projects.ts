@@ -35,6 +35,7 @@ export const projects: ProjectInterface[] = [
       "Next.js",
       "Typescript",
       "TailwindCSS",
+      "shadcn/ui",
       "MySQL",
       "Docker",
       "Stripe",
@@ -43,12 +44,15 @@ export const projects: ProjectInterface[] = [
     ],
     startDate: new Date("2025-10-01"),
     endDate: new Date("2025-11-01"),
-    companyLogoImg: "/projects/winwaterfall/logo.png",
+    companyLogoImg: "/projects/winwaterfall/cover.webp",
     description: `
       <p>
         <strong>WinWaterfall</strong> is a freelance project where I built a
         complete dropshipping platform from scratch, with a strong focus on
-        scalability, security, and production readiness.
+        scalability, security, and production readiness. The platform features
+        a modern UI built with <strong>Tailwind CSS</strong> and 
+        <strong>shadcn/ui</strong>, with full support for 
+        <strong>dark mode</strong> and <strong>multi-language</strong> functionality.
       </p>
 
       <p><strong>Core features</strong></p>
@@ -64,6 +68,10 @@ export const projects: ProjectInterface[] = [
         <li>
           Media storage powered by <strong>Cloudflare R2</strong> with a custom
           domain setup.
+        </li>
+        <li>
+          Responsive design with <strong>dark mode toggle</strong> and 
+          <strong>internationalization (i18n)</strong> support for multiple languages.
         </li>
       </ul>
 
@@ -82,40 +90,99 @@ export const projects: ProjectInterface[] = [
     `,
     pagesInfoArr: [
       {
-        title: "Landing & Dashboard",
+        title: "Landing Pages & Marketing",
         description: `
           <p>
-            Public-facing marketing pages and an internal dashboard designed with
-            a strong focus on <strong>clarity</strong>,
-            <strong>performance</strong>, and <strong>usability</strong>.
+            Public-facing marketing pages featuring a modern design with 
+            <strong>Tailwind CSS</strong> and <strong>shadcn/ui</strong> components.
+            Full support for <strong>dark mode</strong> and 
+            <strong>multi-language</strong> content to reach a global audience.
           </p>
         `,
         imgArr: [
-          "/projects/winwaterfall/img1.webp",
-          "/projects/winwaterfall/img2.webp",
+          "/projects/winwaterfall/landing_1.webp",
+          "/projects/winwaterfall/landing_2.webp",
+          "/projects/winwaterfall/landing_3.webp",
+          "/projects/winwaterfall/landing_4.webp",
         ],
       },
       {
-        title: "Shopify Integration",
+        title: "Admin Dashboard & Management",
         description: `
+          <p>
+            Comprehensive admin interface for platform management, featuring:
+          </p>
           <ul>
-            <li>Secure OAuth authentication with Shopify</li>
-            <li>Automated product import</li>
-            <li>Order synchronization</li>
+            <li>User management and oversight</li>
+            <li>Analytics and reporting</li>
+            <li>System configuration</li>
+            <li>Order monitoring and fulfillment tracking</li>
           </ul>
         `,
-        imgArr: ["/projects/winwaterfall/img3.webp"],
+        imgArr: [
+          "/projects/winwaterfall/admin_1.webp",
+          "/projects/winwaterfall/admin_2.webp",
+        ],
       },
       {
-        title: "Billing & Subscriptions",
+        title: "User Dashboard & Workspace",
         description: `
+          <p>
+            Intuitive user interface designed for dropshippers to manage their business:
+          </p>
           <ul>
-            <li>Stripe subscriptions</li>
-            <li>One-time payments</li>
-            <li>Production-ready billing flow</li>
+            <li>Product catalog management</li>
+            <li>Order tracking and fulfillment</li>
+            <li>Store analytics and insights</li>
+            <li>Multi-store support</li>
           </ul>
         `,
-        imgArr: ["/projects/winwaterfall/img4.webp"],
+        imgArr: [
+          "/projects/winwaterfall/dashboard_1.webp",
+          "/projects/winwaterfall/dashboard_2.webp",
+          "/projects/winwaterfall/dashboard_3.webp",
+          "/projects/winwaterfall/dashboard_4.webp",
+        ],
+      },
+      {
+        title: "Shopify Product Import",
+        description: `
+          <p>
+            Seamless product import workflow with Shopify integration:
+          </p>
+          <ul>
+            <li>Secure OAuth authentication with Shopify</li>
+            <li>One-click product import with customization options</li>
+            <li>Automated inventory synchronization</li>
+            <li>Bulk import capabilities</li>
+            <li>Real-time order processing</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/winwaterfall/shopify_1.webp",
+          "/projects/winwaterfall/shopify_2.webp",
+          "/projects/winwaterfall/shopify_3.webp",
+        ],
+      },
+      {
+        title: "Billing & Subscription Management",
+        description: `
+          <p>
+            Production-ready payment system powered by Stripe:
+          </p>
+          <ul>
+            <li>Flexible subscription plans with tiered pricing</li>
+            <li>One-time payment options</li>
+            <li>Secure payment processing</li>
+            <li>Subscription upgrade/downgrade flow</li>
+            <li>Billing history and invoice management</li>
+            <li>Automated renewal and payment reminders</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/winwaterfall/billing_1.webp",
+          "/projects/winwaterfall/billing_2.webp",
+        ],
       },
     ],
   },
@@ -137,7 +204,7 @@ export const projects: ProjectInterface[] = [
     ],
     startDate: new Date("2024-02-01"),
     endDate: new Date("2024-02-01"),
-    companyLogoImg: "/projects/codewarriors/logo.png",
+    companyLogoImg: "/projects/code-warriors/cover.webp",
     description: `
       <p>
         <strong>Code Warriors</strong> is a competitive project where I ranked
@@ -180,8 +247,10 @@ export const projects: ProjectInterface[] = [
           </ul>
         `,
         imgArr: [
-          "/projects/winwaterfall/img1.webp",
-          "/projects/winwaterfall/img2.webp",
+          "/projects/winwaterfall/landing_1.webp",
+          "/projects/winwaterfall/landing_2.webp",
+          "/projects/winwaterfall/landing_3.webp",
+          "/projects/winwaterfall/landing_4.webp",
         ],
       },
       {

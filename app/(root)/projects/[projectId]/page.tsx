@@ -141,16 +141,18 @@ export default async function Project({ params }: ProjectPageProps) {
               />
             )}
 
-            {page.imgArr.map((img, imgIndex) => (
-              <Image
-                key={imgIndex}
-                src={img}
-                alt={page.title}
-                width={720}
-                height={405}
-                className="my-4 border rounded-md bg-muted"
-              />
-            ))}
+            <div className="gap-4 grid grid-cols-2 my-2">
+              {page.imgArr.map((img, imgIndex) => (
+                <Image
+                  key={imgIndex}
+                  src={img}
+                  alt={page.title}
+                  width={720}
+                  height={405}
+                  className="border rounded-md bg-muted"
+                />
+              ))}
+            </div>
           </div>
         ))}
       </section>

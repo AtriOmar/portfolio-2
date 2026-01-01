@@ -43,9 +43,9 @@ export const experiences: ExperienceInterface[] = [
 
 `,
     skills: [
-      "Typescript",
       "Next.js",
       "React",
+      "Typescript",
       "TailwindCSS",
       "Stripe",
       "Socket.IO",
@@ -79,7 +79,15 @@ export const experiences: ExperienceInterface[] = [
   </li>
 </ul>
 `,
-    skills: ["React", "Express.js", "OAuth", "MongoDB", "Typescript"],
+    skills: [
+      "React",
+      "Javascript",
+      "Redux",
+      "Express.js",
+      "OAuth",
+      "MongoDB",
+      "Socket.IO",
+    ],
     companyUrl: "https://securas.fr/fr/",
     logo: "/experience/securas-logo.png",
   },

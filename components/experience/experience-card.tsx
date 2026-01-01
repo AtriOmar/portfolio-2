@@ -30,10 +30,10 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
     <Link
       href={`/experience/${experience.id}`}
-      className="group block relative overflow-hidden p-4 sm:p-6 border hover:border-primary/40 rounded-lg bg-background hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
+      className="group block relative overflow-hidden p-4 sm:p-6 border hover:border-slate-600/40 rounded-lg bg-background hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
     >
       {/* Gradient overlay (bottom → top) */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/40 via-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
       {/* Bottom CTA inside gradient */}
       <div className="right-3 bottom-3 z-10 absolute flex items-center gap-1 opacity-0 group-hover:opacity-100 font-medium text-white text-sm transition-all group-hover:translate-y-0 duration-300 pointer-events-none">

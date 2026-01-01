@@ -104,6 +104,22 @@ export default function Timeline({ experiences }: TimelineProps) {
                     <p className="text-muted-foreground text-sm line-clamp-2">
                       {experience.summary}
                     </p>
+
+                    <div className="flex flex-wrap gap-1 mt-3 sm:mt-4">
+                      {experience.skills.slice(0, 6).map((skill, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 rounded-md bg-muted font-medium text-muted-foreground text-xs"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                      {experience.skills.length > 6 && (
+                        <span className="px-2 py-1 rounded-md bg-muted font-medium text-muted-foreground text-xs">
+                          +{experience.skills.length - 6} more
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

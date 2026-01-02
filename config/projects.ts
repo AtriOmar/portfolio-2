@@ -461,6 +461,74 @@ export const projects: ProjectInterface[] = [
       },
     ],
   },
+  {
+    id: "tshiil",
+    companyName: "TSHIIL",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    summary:
+      "Static marketing website for a multi-service company with animated UI and contact form functionality.",
+    websiteLink: "https://tshiil.omaratri.com", // Update with actual domain
+    techStack: ["React", "Javascript", "TailwindCSS", "PHP"],
+    startDate: new Date("2023-01-01"), // Update with actual dates
+    endDate: new Date("2023-12-31"),
+    cover: "/projects/tshiil/cover.webp",
+    description: `
+      <p>
+        <strong>TSHIIL</strong> is one of my first projects—a static marketing 
+        website built for a company offering multiple services including web 
+        development, mobile apps, digital marketing, graphic design, administrative 
+        services, and logistics.
+      </p>
+
+      <p><strong>Features</strong></p>
+      <ul>
+        <li>
+          <strong>Animated UI</strong> with smooth transitions and interactions 
+          built in React and TailwindCSS.
+        </li>
+        <li>
+          <strong>Contact form</strong> with PHP backend for email delivery.
+        </li>
+        <li>
+          Service showcase highlighting the company's diverse offerings.
+        </li>
+      </ul>
+
+      <p><strong>Technical details</strong></p>
+      <ul>
+        <li>
+          Static site architecture with <strong>React</strong> and 
+          <strong>TailwindCSS</strong> for fast load times.
+        </li>
+        <li>
+          Simple <strong>PHP</strong> integration for contact form processing.
+        </li>
+      </ul>
+    `,
+    pagesInfoArr: [
+      {
+        title: "Website Pages",
+        description: `
+          <ul>
+            <li>Landing page with service overview</li>
+            <li>Animated sections and smooth transitions</li>
+            <li>Contact form for client inquiries</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/tshiil/app_1.webp",
+          "/projects/tshiil/app_2.webp",
+          "/projects/tshiil/app_3.webp",
+          "/projects/tshiil/app_4.webp",
+          "/projects/tshiil/app_5.webp",
+          "/projects/tshiil/app_6.webp",
+          "/projects/tshiil/app_7.webp",
+          "/projects/tshiil/app_8.webp",
+        ],
+      },
+    ],
+  },
 ];
 
 export const featuredProjects = projects.slice(0, 3);

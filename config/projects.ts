@@ -43,7 +43,7 @@ export const projects: ProjectInterface[] = [
       "Node.js",
     ],
     startDate: new Date("2025-10-01"),
-    endDate: new Date("2025-11-01"),
+    endDate: new Date("2025-11-31"),
     cover: "/projects/winwaterfall/landing_1.webp",
     description: `
       <p>
@@ -189,7 +189,7 @@ export const projects: ProjectInterface[] = [
   {
     id: "code-warriors",
     companyName: "Code Warriors",
-    type: "Professional",
+    type: "Personal",
     category: ["Web Dev", "Full Stack"],
     summary:
       "All-in-one code sharing platform with real-time chat, articles, and community features built for a development competition.",
@@ -202,8 +202,8 @@ export const projects: ProjectInterface[] = [
       "NextAuth",
       "Markdown",
     ],
-    startDate: new Date("2024-01-01"), // Update with actual dates
-    endDate: new Date("2024-12-31"),
+    startDate: new Date("2024-02-14"), // Update with actual dates
+    endDate: new Date("2024-02-29"),
     cover: "/projects/code-warriors/cover.webp",
     description: `
       <p>
@@ -340,7 +340,7 @@ export const projects: ProjectInterface[] = [
     websiteLink: "https://halalcorrect.com", // Update with actual domain
     techStack: ["Gatsby", "React", "Javascript", "TailwindCSS", "Laravel"],
     startDate: new Date("2023-01-01"), // Update with actual dates
-    endDate: new Date("2024-01-01"),
+    endDate: new Date("2023-01-31"),
     cover: "/projects/halal-correct/cover.webp",
     description: `
       <p>
@@ -418,8 +418,8 @@ export const projects: ProjectInterface[] = [
       "Clean and efficient URL shortening service with user authentication, link management, and OpenGraph preview integration.",
     websiteLink: "https://url.omaratri.com",
     techStack: ["React", "Javascript", "TailwindCSS", "Express", "Node.js"],
-    startDate: new Date("2024-02-01"),
-    endDate: new Date("2024-02-01"),
+    startDate: new Date("2024-12-23"),
+    endDate: new Date("2024-12-24"),
     cover: "/projects/url-shortener/cover.webp",
     description: `
       <p>
@@ -499,8 +499,8 @@ export const projects: ProjectInterface[] = [
       "Static marketing website for a multi-service company with animated UI and contact form functionality.",
     websiteLink: "https://tshiil.omaratri.com", // Update with actual domain
     techStack: ["React", "Javascript", "TailwindCSS", "PHP"],
-    startDate: new Date("2023-01-01"), // Update with actual dates
-    endDate: new Date("2023-12-31"),
+    startDate: new Date("2022-11-01"), // Update with actual dates
+    endDate: new Date("2022-11-30"),
     cover: "/projects/tshiil/cover.webp",
     description: `
       <p>
@@ -574,8 +574,8 @@ export const projects: ProjectInterface[] = [
       "Socket.io",
       "AI/Voice",
     ],
-    startDate: new Date("2024-01-01"), // Update with actual dates
-    endDate: new Date("2024-01-01"),
+    startDate: new Date("2024-11-04"), // Update with actual dates
+    endDate: new Date("2024-12-31"),
     cover: "/projects/riaya/cover.webp",
     description: `
       <p>
@@ -725,8 +725,8 @@ export const projects: ProjectInterface[] = [
       "TanStack Query",
       "Konnect",
     ],
-    startDate: new Date("2024-12-31"), // Update with actual dates
-    endDate: new Date("2024-12-31"),
+    startDate: new Date("2023-04-01"), // Update with actual dates
+    endDate: new Date("2024-05-30"),
     cover: "/projects/elcamba/cover.webp",
     description: `
       <p>
@@ -863,8 +863,8 @@ export const projects: ProjectInterface[] = [
       "Social links sharing platform built in 24 hours for an online competition, similar to Linktree.",
     websiteLink: undefined,
     techStack: ["React", "Javascript", "TailwindCSS"],
-    startDate: new Date("2024-01-01"), // Update with actual dates
-    endDate: new Date("2024-01-01"),
+    startDate: new Date("2023-09-16"), // Update with actual dates
+    endDate: new Date("2023-09-16"),
     cover: "/projects/devlinks/cover.webp",
     description: `
       <p>

@@ -13,6 +13,18 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const getTypeBadgeClasses = (type: string) => {
+    const base =
+      "inline-flex items-center gap-2 px-1.5 py-1 text-[10px] rounded-full border backdrop-blur-sm font-medium transition-all duration-300";
+
+    if (type === "Personal") {
+      return `${base} bg-green-950/40 border-green-800 text-green-200`;
+    }
+
+    // treat everything else as Professional / Work
+    return `${base} bg-sky-950/40 border-sky-800 text-sky-200`;
+  };
+
   return (
     <Link
       href={`/projects/${project.id}`}
@@ -20,19 +32,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     >
       {/* Animated outer card */}
       <div className="relative h-full overflow-hidden border border-zinc-800 rounded-xl bg-zinc-900/50 transition-all group-hover:-translate-y-1 duration-500">
-        {/* Animated gradient border (appears on hover) */}
-        {/* <div
-          aria-hidden
-          className="-z-10 absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          style={{
-            background:
-              "linear-gradient(135deg, #0b1220 0%, #091026 25%, #12202a 50%, #0b0d18 75%, #0b1220 100%)",
-            backgroundSize: "300% 300%",
-            animation: "gradient-shift 5s ease infinite",
-            padding: "1px",
-          }}
-        /> */}
-
         {/* Inner dark background to create the border effect */}
         <div
           aria-hidden
@@ -69,25 +68,37 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {/* Dark Gradient Overlay */}
           <div className="absolute -inset-5 bg-linear-to-t from-zinc-900 via-zinc-900/30 to-transparent opacity-70 transition-opacity duration-300 pointer-events-none" />
 
-          {/* Type Badge - animated on hover */}
-          <div className="top-4 right-4 absolute p-2.5 border border-white/6 rounded-full bg-black/40 backdrop-blur-md group-hover:rotate-6 group-hover:scale-105 transition-all duration-500 transform">
-            {project.type === "Personal" ? (
-              <Icons.userFill className="w-4 h-4 text-zinc-100" />
-            ) : (
-              <Icons.work className="w-4 h-4 text-zinc-100" />
-            )}
+          {/* Type Badge - compact pill with icon + text (replaces the tiny circular icon)
+              - kept small so it doesn't take much space
+              - different dark background & border depending on type */}
+          <div
+            className={`top-4 right-4 absolute group-hover:rotate-6 group-hover:scale-105 transition-all duration-500 transform ${
+              project.type === "Personal" ? "" : ""
+            }`}
+          >
+            <span className={getTypeBadgeClasses(project.type)}>
+              {project.type === "Personal" ? (
+                <Icons.userFill className="w-3.5 h-3.5" />
+              ) : (
+                <Icons.work className="w-3.5 h-3.5" />
+              )}
+
+              <span className="leading-none">{project.type}</span>
+            </span>
           </div>
         </div>
 
         {/* Content Section */}
         <div className="z-10 relative space-y-2.5 p-4">
           <div className="space-y-0.5">
-            <div className="flex justify-between items-center">
-              <h5 className="font-bold text-zinc-100 group-hover:text-cyan-50 text-xl line-clamp-2 tracking-tight transition-colors duration-300">
-                {project.companyName}
-              </h5>
+            <div className="flex justify-between items-start">
+              <div className="flex-1 min-w-0">
+                <h5 className="font-bold text-zinc-100 group-hover:text-cyan-50 text-xl line-clamp-2 tracking-tight transition-colors duration-300">
+                  {project.companyName}
+                </h5>
+              </div>
 
-              <Icons.chevronRight className="w-4 h-4 text-zinc-500 group-hover:text-cyan-100 transition-all group-hover:translate-x-1 duration-200" />
+              <Icons.chevronRight className="w-4 h-4 mt-1 ml-3 text-zinc-500 group-hover:text-cyan-100 transition-all group-hover:translate-x-1 duration-200" />
             </div>
 
             {/* Date range */}
@@ -106,7 +117,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.summary}
           </p>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-2">
             {/* ChipContainer may render its own chips; we add a small hook to animate them on hover */}
             <div className="flex flex-wrap gap-2">
               <ChipContainer textArr={project.techStack} />

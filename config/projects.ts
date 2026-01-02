@@ -337,7 +337,7 @@ export const projects: ProjectInterface[] = [
     category: ["Web Dev", "Frontend"],
     summary:
       "International halal certification website with multi-country presence, built with Gatsby SSG for optimal performance.",
-    websiteLink: "https://halalcorrect.example.com", // Update with actual domain
+    websiteLink: "https://halalcorrect.com", // Update with actual domain
     techStack: ["Gatsby", "React", "Javascript", "TailwindCSS", "Laravel"],
     startDate: new Date("2023-01-01"), // Update with actual dates
     endDate: new Date("2024-01-01"),
@@ -555,6 +555,144 @@ export const projects: ProjectInterface[] = [
           "/projects/tshiil/app_7.webp",
           "/projects/tshiil/app_8.webp",
         ],
+      },
+    ],
+  },
+  {
+    id: "riaya",
+    companyName: "Riaya",
+    type: "Professional",
+    category: ["Web Dev", "Full Stack", "AI"],
+    summary:
+      "AI-powered doctor appointment platform that connects patients to the right specialists through voice calls, with real-time scheduling and patient management.",
+    websiteLink: "https://riaya.omaratri.com", // Update with actual domain
+    techStack: [
+      "Next.js",
+      "Typescript",
+      "TailwindCSS",
+      "shadcn/ui",
+      "Socket.io",
+      "AI/Voice",
+    ],
+    startDate: new Date("2024-01-01"), // Update with actual dates
+    endDate: new Date("2024-01-01"),
+    cover: "/projects/riaya/cover.webp",
+    description: `
+      <p>
+        <strong>Riaya</strong> is an AI-powered healthcare platform that 
+        revolutionizes doctor appointments through intelligent voice-based 
+        patient triage and automated doctor matching.
+      </p>
+
+      <p><strong>Core concept</strong></p>
+      <ul>
+        <li>
+          <strong>AI voice assistant</strong> that answers patient calls, collects 
+          symptoms, location, and personal information.
+        </li>
+        <li>
+          <strong>Intelligent doctor matching</strong> based on specialty, 
+          location proximity, and real-time availability.
+        </li>
+        <li>
+          Doctors receive <strong>real-time appointment notifications</strong> via 
+          Socket.io and can accept or decline pending requests.
+        </li>
+      </ul>
+
+      <p><strong>Platform features</strong></p>
+      <ul>
+        <li>
+          <strong>Doctor calendar management</strong> with scheduling, appointment 
+          tracking, and availability control.
+        </li>
+        <li>
+          <strong>Patient management system</strong> including medical history, 
+          prescriptions, and consultation notes.
+        </li>
+        <li>
+          <strong>Real-time notifications</strong> for appointment updates and 
+          patient requests.
+        </li>
+        <li>
+          <strong>Admin dashboard</strong> for platform oversight and management.
+        </li>
+      </ul>
+
+      <p><strong>Technical implementation</strong></p>
+      <ul>
+        <li>
+          Built with <strong>Next.js App Router</strong>, <strong>TailwindCSS</strong>, 
+          and <strong>shadcn/ui</strong> components.
+        </li>
+        <li>
+          <strong>Socket.io</strong> integration for real-time appointment 
+          notifications and updates.
+        </li>
+        <li>
+          AI voice processing for automated patient intake and doctor assignment.
+        </li>
+      </ul>
+
+      <p><em>Note: Project currently in development.</em></p>
+    `,
+    pagesInfoArr: [
+      {
+        title: "Landing Page",
+        description: `
+          <ul>
+            <li>Platform overview and AI-powered features</li>
+            <li>How it works for patients and doctors</li>
+            <li>Call-to-action for doctor registration</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/riaya/landing_1.webp",
+          "/projects/riaya/landing_2.webp",
+          "/projects/riaya/landing_3.webp",
+          "/projects/riaya/landing_4.webp",
+          "/projects/riaya/landing_5.webp",
+          "/projects/riaya/landing_6.webp",
+        ],
+      },
+      {
+        title: "Doctor Dashboard",
+        description: `
+          <ul>
+            <li>Calendar view with scheduled and pending appointments</li>
+            <li>Real-time notifications for new patient requests</li>
+            <li>Accept/decline appointment functionality</li>
+            <li>Availability management</li>
+          </ul>
+        `,
+        imgArr: ["/projects/riaya/dashboard.webp"],
+      },
+      {
+        title: "Patient Management",
+        description: `
+          <ul>
+            <li>AI-assigned appointment details with patient info and symptoms</li>
+            <li>Medical history tracking</li>
+            <li>Prescription management</li>
+            <li>Consultation notes and records</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/riaya/appointments.webp",
+          "/projects/riaya/patient-history.webp",
+        ],
+      },
+      {
+        title: "Admin Dashboard",
+        description: `
+          <ul>
+            <li>Platform overview and analytics</li>
+            <li>Doctor and patient management</li>
+            <li>Appointment monitoring</li>
+            <li>System configuration</li>
+          </ul>
+        `,
+        imgArr: ["/projects/riaya/admin.webp"],
       },
     ],
   },

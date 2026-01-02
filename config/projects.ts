@@ -259,7 +259,11 @@ export const projects: ProjectInterface[] = [
             <li>Call-to-action for community registration</li>
           </ul>
         `,
-        imgArr: ["/projects/codewarriors/landing.webp"],
+        imgArr: [
+          "/projects/code-warriors/landing_1.webp",
+          "/projects/code-warriors/landing_2.webp",
+          "/projects/code-warriors/landing_3.webp",
+        ],
       },
       {
         title: "Questions",
@@ -270,7 +274,11 @@ export const projects: ProjectInterface[] = [
             <li>Threading and discussion features</li>
           </ul>
         `,
-        imgArr: ["/projects/codewarriors/questions.webp"],
+        imgArr: [
+          "/projects/code-warriors/questions_1.webp",
+          "/projects/code-warriors/questions_2.webp",
+          "/projects/code-warriors/questions_3.webp",
+        ],
       },
       {
         title: "Articles, Tips & FAQs",
@@ -282,8 +290,10 @@ export const projects: ProjectInterface[] = [
           </ul>
         `,
         imgArr: [
-          "/projects/codewarriors/articles.webp",
-          "/projects/codewarriors/tips.webp",
+          "/projects/code-warriors/articles_1.webp",
+          "/projects/code-warriors/articles_2.webp",
+          "/projects/code-warriors/tips.webp",
+          "/projects/code-warriors/faqs.webp",
         ],
       },
       {
@@ -295,7 +305,11 @@ export const projects: ProjectInterface[] = [
             <li>Real-time notifications</li>
           </ul>
         `,
-        imgArr: ["/projects/codewarriors/chat.webp"],
+        imgArr: [
+          "/projects/code-warriors/social_1.webp",
+          "/projects/code-warriors/social_2.webp",
+          "/projects/code-warriors/social_3.webp",
+        ],
       },
       {
         title: "Admin Dashboard",
@@ -306,7 +320,13 @@ export const projects: ProjectInterface[] = [
             <li>Platform analytics and monitoring</li>
           </ul>
         `,
-        imgArr: ["/projects/codewarriors/admin.webp"],
+        imgArr: [
+          "/projects/code-warriors/admin_1.webp",
+          "/projects/code-warriors/admin_2.webp",
+          "/projects/code-warriors/admin_3.webp",
+          "/projects/code-warriors/admin_4.webp",
+          "/projects/code-warriors/admin_5.webp",
+        ],
       },
     ],
   },

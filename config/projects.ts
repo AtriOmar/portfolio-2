@@ -854,6 +854,68 @@ export const projects: ProjectInterface[] = [
       },
     ],
   },
+  {
+    id: "devlinks",
+    companyName: "DevLinks",
+    type: "Personal",
+    category: ["Web Dev", "Frontend"],
+    summary:
+      "Social links sharing platform built in 24 hours for an online competition, similar to Linktree.",
+    websiteLink: undefined,
+    techStack: ["React", "Javascript", "TailwindCSS"],
+    startDate: new Date("2024-01-01"), // Update with actual dates
+    endDate: new Date("2024-01-01"),
+    cover: "/projects/devlinks/cover.webp",
+    description: `
+      <p>
+        <strong>DevLinks</strong> is a social links sharing platform I built 
+        in 24 hours for an online development competition. The platform allows 
+        users to create a single page with all their social media and web links, 
+        similar to Linktree.
+      </p>
+
+      <p><strong>Features</strong></p>
+      <ul>
+        <li>
+          <strong>Link aggregation</strong> for social media profiles and websites.
+        </li>
+        <li>
+          Simple, clean interface for sharing multiple links from one URL.
+        </li>
+        <li>
+          Responsive design optimized for mobile and desktop viewing.
+        </li>
+      </ul>
+
+      <p><strong>Technical implementation</strong></p>
+      <ul>
+        <li>
+          Built with <strong>React</strong> and <strong>TailwindCSS</strong> 
+          in a 24-hour time constraint.
+        </li>
+        <li>
+          Static site architecture for fast performance.
+        </li>
+      </ul>
+    `,
+    pagesInfoArr: [
+      {
+        title: "Website Pages",
+        description: `
+          <ul>
+            <li>Link creation and management interface</li>
+            <li>Public profile page with all user links</li>
+            <li>Responsive design for all devices</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/devlinks/devlinks_1.webp",
+          "/projects/devlinks/devlinks_2.webp",
+          "/projects/devlinks/devlinks_3.webp",
+        ],
+      },
+    ],
+  },
 ];
 
 export const featuredProjects = projects.slice(0, 3);

@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Omar Atri | Developer Portfolio",
+  name: "Omar Atri Portfolio",
   authorName: "Omar Atri",
   username: "omaratri",
   description:
-    "Omar Atri's portfolio - A modern, responsive Next.js portfolio for developers. This open-source template can be customized to showcase your own skills, projects, and professional experience.",
+    "Omar Atri's developer portfolio showcasing skills, experience, and projects. Built with Next.js and available as an open-source template.",
   url: "https://omaratri.com",
   links: {
     github: "https://github.com/AtriOmar",

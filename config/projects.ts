@@ -193,7 +193,7 @@ export const projects: ProjectInterface[] = [
     category: ["Web Dev", "Full Stack"],
     summary:
       "All-in-one code sharing platform with real-time chat, articles, and community features built for a development competition.",
-    websiteLink: "https://codewarriors.example.com", // Update with actual domain
+    websiteLink: "https://warriors.omaratri.com", // Update with actual domain
     techStack: [
       "Next.js",
       "Javascript",
@@ -703,6 +703,153 @@ export const projects: ProjectInterface[] = [
           "/projects/riaya/admin_1.webp",
           "/projects/riaya/admin_2.webp",
           "/projects/riaya/admin_3.webp",
+        ],
+      },
+    ],
+  },
+  {
+    id: "elcamba",
+    companyName: "Elcamba",
+    type: "Professional",
+    category: ["Web Dev", "Full Stack", "E-commerce"],
+    summary:
+      "Multi-vendor agricultural marketplace for Tunisia, connecting farmers and buyers with real-time chat and integrated local payments.",
+    websiteLink: "https://elcamba.omaratri.com", // Update with actual domain
+    techStack: [
+      "React",
+      "Javascript",
+      "TailwindCSS",
+      "Express",
+      "Node.js",
+      "Socket.io",
+      "TanStack Query",
+      "Konnect",
+    ],
+    startDate: new Date("2024-12-31"), // Update with actual dates
+    endDate: new Date("2024-12-31"),
+    cover: "/projects/elcamba/cover.webp",
+    description: `
+      <p>
+        <strong>Elcamba</strong> is a multi-vendor e-commerce platform 
+        specifically designed for Tunisia's agricultural sector, creating a 
+        marketplace that connects farmers, suppliers, and buyers.
+      </p>
+
+      <p><strong>Core features</strong></p>
+      <ul>
+        <li>
+          <strong>Multi-vendor marketplace</strong> where agricultural suppliers 
+          can list and manage their products.
+        </li>
+        <li>
+          <strong>Real-time chat</strong> between buyers and vendors using 
+          Socket.io for instant communication.
+        </li>
+        <li>
+          <strong>Integrated payments</strong> via Konnect, Tunisia's leading 
+          payment platform, for secure local transactions.
+        </li>
+        <li>
+          <strong>Vendor dashboard</strong> for product management, order 
+          tracking, and sales analytics.
+        </li>
+        <li>
+          <strong>Admin dashboard</strong> for platform management, vendor 
+          oversight, and transaction monitoring.
+        </li>
+      </ul>
+
+      <p><strong>Technical implementation</strong></p>
+      <ul>
+        <li>
+          Frontend built with <strong>React</strong> and styled with 
+          <strong>TailwindCSS</strong> for a responsive shopping experience.
+        </li>
+        <li>
+          Backend powered by <strong>Express</strong> and <strong>Node.js</strong> 
+          for robust API handling.
+        </li>
+        <li>
+          <strong>TanStack Query (React Query)</strong> for efficient data 
+          caching and state management.
+        </li>
+        <li>
+          <strong>Socket.io</strong> for real-time messaging between vendors 
+          and customers.
+        </li>
+        <li>
+          <strong>Konnect payment integration</strong> for seamless Tunisian 
+          payment processing.
+        </li>
+      </ul>
+    `,
+    pagesInfoArr: [
+      {
+        title: "Home & Products",
+        description: `
+          <ul>
+            <li>Agricultural product marketplace with filtering and search</li>
+            <li>Product listings from multiple vendors</li>
+            <li>Category browsing for different agricultural products</li>
+            <li>Product details with vendor information</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/elcamba/home_1.webp",
+          "/projects/elcamba/home_2.webp",
+          "/projects/elcamba/home_3.webp",
+          "/projects/elcamba/home_4.webp",
+          "/projects/elcamba/products_1.webp",
+          "/projects/elcamba/products_2.webp",
+        ],
+      },
+      {
+        title: "Vendor Dashboard",
+        description: `
+          <ul>
+            <li>Product management and inventory control</li>
+            <li>Order tracking and fulfillment</li>
+            <li>Sales analytics and performance metrics</li>
+            <li>Customer message notifications</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/elcamba/dashboard_1.webp",
+          "/projects/elcamba/dashboard_2.webp",
+          "/projects/elcamba/dashboard_3.webp",
+        ],
+      },
+      {
+        title: "Admin Dashboard",
+        description: `
+          <ul>
+            <li>Platform-wide analytics and monitoring</li>
+            <li>Vendor management and approval</li>
+            <li>Transaction oversight</li>
+            <li>Product moderation</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/elcamba/admin_1.webp",
+          "/projects/elcamba/admin_2.webp",
+          "/projects/elcamba/admin_3.webp",
+          "/projects/elcamba/admin_4.webp",
+          "/projects/elcamba/admin_5.webp",
+          "/projects/elcamba/admin_6.webp",
+        ],
+      },
+      {
+        title: "Real-time Chat",
+        description: `
+          <ul>
+            <li>Live messaging between buyers and vendors</li>
+            <li>Product inquiries and negotiations</li>
+            <li>Instant notifications for new messages</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/elcamba/chat_1.webp",
+          "/projects/elcamba/chat_2.webp",
         ],
       },
     ],

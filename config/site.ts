@@ -8,11 +8,9 @@ export const siteConfig = {
   links: {
     github: "https://github.com/AtriOmar",
   },
-  ogImage: "https://omaratri.com/profile-img.jpg",
-  iconIco:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357384/assets/naman-favicon.ico",
-  logoIcon:
-    "https://res.cloudinary.com/dbfvcn3f6/image/upload/v1692357294/assets/naman-logo.png",
+  ogImage: "https://omaratri.com/logo_square.jpg",
+  iconIco: "https://omaratri.com/logo.jpg",
+  logoIcon: "https://omaratri.com/logo.jpg",
   keywords: [
     "Omar Atri",
     "Full Stack Developer",

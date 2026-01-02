@@ -54,7 +54,7 @@ export default async function Project({ params }: ProjectPageProps) {
           {formatDateFromObj(project.startDate)}
         </time>
 
-        <h1 className="flex justify-between items-center mt-2 font-heading text-4xl lg:text-5xl">
+        <h1 className="flex items-center mt-2 font-heading text-4xl lg:text-5xl">
           {project.companyName}
 
           <div className="flex items-center">

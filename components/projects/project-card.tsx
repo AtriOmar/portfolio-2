@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Icons } from "@/components/common/icons";
 import ChipContainer from "@/components/ui/chip-container";
 import { ProjectInterface } from "@/config/projects";
+import { formatDateRange } from "@/lib/utils";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -80,13 +81,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Content Section */}
         <div className="z-10 relative space-y-2.5 p-4">
-          <div className="flex justify-between items-center">
-            <h5 className="font-bold text-zinc-100 group-hover:text-cyan-50 text-xl line-clamp-2 tracking-tight transition-colors duration-300">
-              {project.companyName}
-            </h5>
+          <div className="space-y-0.5">
+            <div className="flex justify-between items-center">
+              <h5 className="font-bold text-zinc-100 group-hover:text-cyan-50 text-xl line-clamp-2 tracking-tight transition-colors duration-300">
+                {project.companyName}
+              </h5>
 
-            <div className="flex items-center gap-2">
               <Icons.chevronRight className="w-4 h-4 text-zinc-500 group-hover:text-cyan-100 transition-all group-hover:translate-x-1 duration-200" />
+            </div>
+
+            {/* Date range */}
+            <div className="flex items-center gap-1.5 text-zinc-500 group-hover:text-zinc-400 text-xs transition-colors">
+              <Icons.calendar className="w-3.5 h-3.5" />
+              <span>
+                {formatDateRange(
+                  new Date(project.startDate),
+                  new Date(project.endDate)
+                )}
+              </span>
             </div>
           </div>
 
@@ -94,10 +106,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.summary}
           </p>
 
-          <div className="flex flex-wrap gap-2 pt-2">
+          <div className="flex flex-wrap gap-2">
             {/* ChipContainer may render its own chips; we add a small hook to animate them on hover */}
             <div className="flex flex-wrap gap-2">
-              <ChipContainer textArr={project.category} />
+              <ChipContainer textArr={project.techStack} />
             </div>
           </div>
         </div>

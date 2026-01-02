@@ -918,4 +918,8 @@ export const projects: ProjectInterface[] = [
   },
 ];
 
+export const sortedProjects = projects.sort(
+  (a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
+);
+
 export const featuredProjects = projects.slice(0, 3);

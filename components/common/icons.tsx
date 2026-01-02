@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BookMarked,
   Building,
+  Calendar,
   Check,
   ChevronDown,
   ChevronLeft,
@@ -76,6 +77,7 @@ import {
 } from "react-icons/si";
 
 export const Icons = {
+  calendar: Calendar,
   contact: Phone,
   gitRepoIcon: BookMarked,
   gitOrgBuilding: Building,

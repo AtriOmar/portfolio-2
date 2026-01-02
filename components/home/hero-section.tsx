@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 import { AnimatedText } from "@/components/common/animated-text";
 import { Icons } from "@/components/common/icons";
@@ -10,27 +11,40 @@ import ElectricBorder from "@/components/ui/electric-border";
 import Orb from "@/components/ui/orb";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
-import { useRef } from "react";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [showOrb, setShowOrb] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 640px)");
+    setShowOrb(mediaQuery.matches);
+
+    const handler = (e: MediaQueryListEvent) => setShowOrb(e.matches);
+    mediaQuery.addEventListener("change", handler);
+
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
 
   return (
     <section
       ref={sectionRef}
       className="relative flex items-center space-y-6 h-screen mb-0 md:py-20 lg:py-32 pt-6 pb-8 md:pb-12"
     >
-      <div className="top-1/2 left-1/2 -z-1 absolute size-[900px] -translate-x-1/2 -translate-y-[calc(50%+40px)]">
-        <div className="relative size-full">
-          <Orb
-            hoverIntensity={0.5}
-            rotateOnHover={true}
-            hue={0}
-            forceHoverState={false}
-            containerRef={sectionRef}
-          />
+      {showOrb && (
+        <div className="top-1/2 left-1/2 -z-1 absolute size-[900px] -translate-x-1/2 -translate-y-[calc(50%+40px)]">
+          <div className="relative size-full">
+            <Orb
+              hoverIntensity={0.5}
+              rotateOnHover={true}
+              hue={0}
+              forceHoverState={false}
+              containerRef={sectionRef}
+            />
+          </div>
         </div>
-      </div>
+      )}
+
       <div className="flex flex-col items-center gap-4 max-w-5xl -mt-20 px-0! text-center container">
         <ElectricBorder
           color="red"
@@ -48,6 +62,7 @@ export function HeroSection() {
             priority
           />
         </ElectricBorder>
+
         <AnimatedText
           as="h1"
           delay={0.2}
@@ -55,6 +70,7 @@ export function HeroSection() {
         >
           Omar Atri
         </AnimatedText>
+
         <AnimatedText
           as="h3"
           delay={0.4}
@@ -94,6 +110,7 @@ export function HeroSection() {
             </Link>
           </AnimatedText>
         </div>
+
         <AnimatedText delay={1.2}>
           <Icons.chevronDown className="w-6 h-6 mt-10" />
         </AnimatedText>

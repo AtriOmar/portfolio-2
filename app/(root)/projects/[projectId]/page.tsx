@@ -141,7 +141,7 @@ export default async function Project({ params }: ProjectPageProps) {
               />
             )}
 
-            <div className="gap-4 grid grid-cols-2 my-2">
+            <div className="gap-4 grid sm:grid-cols-2 my-2">
               {page.imgArr.map((img, imgIndex) => (
                 <Image
                   key={imgIndex}

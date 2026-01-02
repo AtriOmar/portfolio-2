@@ -44,7 +44,7 @@ export const projects: ProjectInterface[] = [
     ],
     startDate: new Date("2025-10-01"),
     endDate: new Date("2025-11-01"),
-    cover: "/projects/winwaterfall/cover.webp",
+    cover: "/projects/winwaterfall/landing_1.webp",
     description: `
       <p>
         <strong>WinWaterfall</strong> is a freelance project where I built a
@@ -331,51 +331,80 @@ export const projects: ProjectInterface[] = [
     ],
   },
   {
-    id: "halal-correct",
+    id: "halalcorrect",
     companyName: "Halal Correct",
     type: "Professional",
-    category: ["Web Dev", "UI/UX"],
+    category: ["Web Dev", "Frontend"],
     summary:
-      "Frontend rebuild focused on SEO, performance, and pixel-perfect responsive design.",
-    websiteLink: "https://halalcorrect.com",
-    techStack: ["Gatsby", "Typescript", "TailwindCSS"],
-    startDate: new Date("2023-01-01"),
-    endDate: new Date("2023-02-01"),
-    cover: "/projects/halalcorrect/logo.png",
+      "International halal certification website with multi-country presence, built with Gatsby SSG for optimal performance.",
+    websiteLink: "https://halalcorrect.example.com", // Update with actual domain
+    techStack: ["Gatsby", "React", "Javascript", "TailwindCSS", "Laravel"],
+    startDate: new Date("2023-01-01"), // Update with actual dates
+    endDate: new Date("2024-01-01"),
+    cover: "/projects/halal-correct/cover.webp",
     description: `
       <p>
-        <strong>Halal Correct</strong> was a freelance project where I rebuilt the
-        frontend of the company website with a strong focus on performance, SEO,
-        and visual accuracy.
+        <strong>Halal Correct</strong> is an international halal certification 
+        company with branches across multiple countries. I developed and continue 
+        to maintain the frontend of their website, focusing on performance and 
+        user experience.
       </p>
 
-      <p><strong>What I delivered</strong></p>
+      <p><strong>Features</strong></p>
       <ul>
         <li>
-          A fast, static website using <strong>Gatsby (SSG)</strong>.
+          <strong>Company information</strong> including services, terms, and 
+          certification processes.
         </li>
         <li>
-          Pixel-perfect and fully responsive UI built with
-          <strong>TailwindCSS</strong>.
+          <strong>Multiple contact forms</strong> for general inquiries and 
+          certification applications.
         </li>
         <li>
-          Improved SEO and overall website performance.
+          Multi-country presence with information for different regional branches.
+        </li>
+      </ul>
+
+      <p><strong>Technical implementation</strong></p>
+      <ul>
+        <li>
+          Built with <strong>Gatsby</strong> for static site generation, ensuring 
+          fast load times and excellent SEO.
+        </li>
+        <li>
+          Styled with <strong>TailwindCSS</strong> for a clean, professional interface.
+        </li>
+        <li>
+          Backend powered by <strong>Laravel</strong> (developed by my partner) 
+          for form processing and data management.
+        </li>
+        <li>
+          <strong>Ongoing maintenance</strong> and updates to meet the company's 
+          evolving needs.
         </li>
       </ul>
     `,
     pagesInfoArr: [
       {
-        title: "Marketing Pages",
+        title: "Website Pages",
         description: `
-          <p>
-            Static marketing pages rebuilt with a focus on
-            <strong>speed</strong>, <strong>SEO</strong>, and
-            <strong>responsive design</strong>.
-          </p>
+          <ul>
+            <li>Company overview and certification services</li>
+            <li>Contact and application submission forms</li>
+            <li>Terms and conditions</li>
+            <li>Multi-country branch information</li>
+          </ul>
         `,
         imgArr: [
-          "/projects/winwaterfall/img1.webp",
-          "/projects/winwaterfall/img2.webp",
+          "/projects/halal-correct/app_1.webp",
+          "/projects/halal-correct/app_2.webp",
+          "/projects/halal-correct/app_3.webp",
+          "/projects/halal-correct/app_4.webp",
+          "/projects/halal-correct/app_5.webp",
+          "/projects/halal-correct/app_6.webp",
+          "/projects/halal-correct/app_7.webp",
+          "/projects/halal-correct/app_8.webp",
+          "/projects/halal-correct/app_9.webp",
         ],
       },
     ],

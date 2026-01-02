@@ -100,7 +100,7 @@ export default async function Project({ params }: ProjectPageProps) {
       </div>
 
       <Image
-        src={project.companyLogoImg}
+        src={project.cover}
         alt={project.companyName}
         width={720}
         height={405}

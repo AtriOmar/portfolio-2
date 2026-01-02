@@ -60,7 +60,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="relative w-full h-[200px] overflow-hidden">
           <Image
             className="top-1/2! left-1/2! min-w-full group-hover:min-w-[110%] object-cover -translate-x-1/2 -translate-y-1/2 duration-300"
-            src={project.companyLogoImg}
+            src={project.cover}
             alt={project.companyName}
             fill
           />

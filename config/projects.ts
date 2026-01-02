@@ -17,7 +17,7 @@ export interface ProjectInterface {
   techStack: string[];
   startDate: Date;
   endDate: Date;
-  companyLogoImg: any;
+  cover: string;
   description: string; // plain text OR HTML
   pagesInfoArr: PagesInfoInterface[];
 }
@@ -44,7 +44,7 @@ export const projects: ProjectInterface[] = [
     ],
     startDate: new Date("2025-10-01"),
     endDate: new Date("2025-11-01"),
-    companyLogoImg: "/projects/winwaterfall/cover.webp",
+    cover: "/projects/winwaterfall/cover.webp",
     description: `
       <p>
         <strong>WinWaterfall</strong> is a freelance project where I built a
@@ -189,91 +189,124 @@ export const projects: ProjectInterface[] = [
   {
     id: "code-warriors",
     companyName: "Code Warriors",
-    type: "Personal",
+    type: "Professional",
     category: ["Web Dev", "Full Stack"],
     summary:
-      "Competitive platform for sharing IT questions and articles with real-time chat and OAuth authentication.",
-    websiteLink: "https://warriors.omaratri.com",
+      "All-in-one code sharing platform with real-time chat, articles, and community features built for a development competition.",
+    websiteLink: "https://codewarriors.example.com", // Update with actual domain
     techStack: [
       "Next.js",
-      "Typescript",
+      "Javascript",
       "TailwindCSS",
-      "MySQL",
-      "Socket.IO",
+      "Socket.io",
       "NextAuth",
+      "Markdown",
     ],
-    startDate: new Date("2024-02-01"),
-    endDate: new Date("2024-02-01"),
-    companyLogoImg: "/projects/code-warriors/cover.webp",
+    startDate: new Date("2024-01-01"), // Update with actual dates
+    endDate: new Date("2024-12-31"),
+    cover: "/projects/code-warriors/cover.webp",
     description: `
       <p>
-        <strong>Code Warriors</strong> is a competitive project where I ranked
-        <strong>2nd</strong>. The platform was designed to help developers share
-        questions, articles, and best practices in a clean and interactive way.
+        <strong>Code Warriors</strong> is a comprehensive code sharing platform 
+        I built for a development competition, featuring real-time communication 
+        and community-driven content.
       </p>
 
-      <p><strong>Platform highlights</strong></p>
+      <p><strong>Core features</strong></p>
       <ul>
         <li>
-          Full-stack web application built using
-          <strong>Next.js (pages router)</strong>.
+          <strong>Multi-provider OAuth</strong> authentication with Google, Github, 
+          Twitter, and Facebook using NextAuth.
         </li>
         <li>
-          OAuth authentication with Google, Twitter, Facebook, and GitHub using
-          <strong>NextAuth</strong>.
+          <strong>Real-time chat system</strong> built with Socket.io, including 
+          friend requests and live messaging.
         </li>
         <li>
-          Real-time chat system with friend requests powered by
-          <strong>Socket.IO</strong>.
+          <strong>Markdown support</strong> for questions, enabling rich code 
+          formatting and syntax highlighting.
         </li>
         <li>
-          Markdown support for questions and articles to improve content quality.
+          Content hub with <strong>articles, tips, and FAQs</strong> for the 
+          developer community.
+        </li>
+        <li>
+          <strong>Admin dashboard</strong> for platform management and moderation.
         </li>
       </ul>
 
-      <p>
-        This project emphasized real-time interaction, authentication flows, and
-        building a smooth developer-focused user experience.
-      </p>
+      <p><strong>Technical implementation</strong></p>
+      <ul>
+        <li>
+          Built with <strong>Next.js Pages Router</strong> and styled with 
+          <strong>TailwindCSS</strong>.
+        </li>
+        <li>
+          WebSocket integration via <strong>Socket.io</strong> for real-time 
+          features.
+        </li>
+        <li>
+          Markdown parsing and rendering for developer-friendly content creation.
+        </li>
+      </ul>
     `,
     pagesInfoArr: [
       {
-        title: "Questions & Articles",
+        title: "Landing Page",
         description: `
           <ul>
-            <li>Question and article posting</li>
-            <li>Markdown-based content rendering</li>
-            <li>Developer-focused UI</li>
+            <li>Platform overview and feature highlights</li>
+            <li>Call-to-action for community registration</li>
+          </ul>
+        `,
+        imgArr: ["/projects/codewarriors/landing.webp"],
+      },
+      {
+        title: "Questions",
+        description: `
+          <ul>
+            <li>Markdown-supported question posting with code syntax highlighting</li>
+            <li>Community Q&A forum for developers</li>
+            <li>Threading and discussion features</li>
+          </ul>
+        `,
+        imgArr: ["/projects/codewarriors/questions.webp"],
+      },
+      {
+        title: "Articles, Tips & FAQs",
+        description: `
+          <ul>
+            <li>Educational articles and coding tips</li>
+            <li>Frequently asked questions section</li>
+            <li>Community-contributed content</li>
           </ul>
         `,
         imgArr: [
-          "/projects/winwaterfall/landing_1.webp",
-          "/projects/winwaterfall/landing_2.webp",
-          "/projects/winwaterfall/landing_3.webp",
-          "/projects/winwaterfall/landing_4.webp",
+          "/projects/codewarriors/articles.webp",
+          "/projects/codewarriors/tips.webp",
         ],
       },
       {
-        title: "Authentication",
+        title: "Real-time Chat & Social",
         description: `
           <ul>
-            <li>OAuth login with multiple providers</li>
-            <li>Secure session handling</li>
-            <li>Smooth onboarding experience</li>
+            <li>Live messaging with Socket.io</li>
+            <li>Friend request system</li>
+            <li>Real-time notifications</li>
           </ul>
         `,
-        imgArr: ["/projects/winwaterfall/img3.webp"],
+        imgArr: ["/projects/codewarriors/chat.webp"],
       },
       {
-        title: "Real-time Chat",
+        title: "Admin Dashboard",
         description: `
           <ul>
-            <li>Live messaging</li>
-            <li>Friend requests</li>
-            <li>Real-time updates using WebSockets</li>
+            <li>Content moderation tools</li>
+            <li>User management</li>
+            <li>Platform analytics and monitoring</li>
           </ul>
         `,
-        imgArr: ["/projects/winwaterfall/img4.webp"],
+        imgArr: ["/projects/codewarriors/admin.webp"],
       },
     ],
   },
@@ -288,7 +321,7 @@ export const projects: ProjectInterface[] = [
     techStack: ["Gatsby", "Typescript", "TailwindCSS"],
     startDate: new Date("2023-01-01"),
     endDate: new Date("2023-02-01"),
-    companyLogoImg: "/projects/halalcorrect/logo.png",
+    cover: "/projects/halalcorrect/logo.png",
     description: `
       <p>
         <strong>Halal Correct</strong> was a freelance project where I rebuilt the
@@ -324,6 +357,87 @@ export const projects: ProjectInterface[] = [
           "/projects/winwaterfall/img1.webp",
           "/projects/winwaterfall/img2.webp",
         ],
+      },
+    ],
+  },
+  {
+    id: "urlshortener",
+    companyName: "URLShortener",
+    type: "Personal",
+    category: ["Web Dev", "Full Stack"],
+    summary:
+      "Clean and efficient URL shortening service with user authentication, link management, and OpenGraph preview integration.",
+    websiteLink: "https://url.omaratri.com",
+    techStack: ["React", "Javascript", "TailwindCSS", "Express", "Node.js"],
+    startDate: new Date("2024-02-01"),
+    endDate: new Date("2024-02-01"),
+    cover: "/projects/url-shortener/cover.webp",
+    description: `
+      <p>
+        <strong>URLShortener</strong> is a personal project focused on building
+        a clean, user-friendly URL shortening service with essential features for
+        link management and tracking.
+      </p>
+
+      <p><strong>Core features</strong></p>
+      <ul>
+        <li>
+          <strong>Instant URL shortening</strong> with custom or auto-generated aliases.
+        </li>
+        <li>
+          <strong>User authentication</strong> for personalized link management.
+        </li>
+        <li>
+          <strong>OpenGraph integration</strong> that automatically fetches preview 
+          images from original URLs for better visual organization.
+        </li>
+      </ul>
+
+      <p><strong>Technical highlights</strong></p>
+      <ul>
+        <li>
+          <strong>React</strong> frontend with <strong>TailwindCSS</strong> for a 
+          responsive, clean interface.
+        </li>
+        <li>
+          RESTful API backend with <strong>Express</strong> and <strong>Node.js</strong>.
+        </li>
+      </ul>
+    `,
+    pagesInfoArr: [
+      {
+        title: "URL Shortening",
+        description: `
+          <ul>
+            <li>Enter long URLs and get instant shortened aliases</li>
+            <li>One-click copy functionality</li>
+            <li>Works for both authenticated and guest users</li>
+          </ul>
+        `,
+        imgArr: ["/projects/url-shortener/app_1.webp"],
+      },
+      {
+        title: "Link Management",
+        description: `
+          <ul>
+            <li>All shortened URLs displayed with OpenGraph preview images</li>
+            <li>Delete or modify existing links</li>
+          </ul>
+        `,
+        imgArr: [
+          "/projects/url-shortener/app_2.webp",
+          "/projects/url-shortener/app_3.webp",
+        ],
+      },
+      {
+        title: "Authentication",
+        description: `
+          <ul>
+            <li>Login and registration pages</li>
+            <li>Session-based user management</li>
+          </ul>
+        `,
+        imgArr: ["/projects/url-shortener/login.webp"],
       },
     ],
   },

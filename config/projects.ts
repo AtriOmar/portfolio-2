@@ -653,6 +653,7 @@ export const projects: ProjectInterface[] = [
           "/projects/riaya/landing_4.webp",
           "/projects/riaya/landing_5.webp",
           "/projects/riaya/landing_6.webp",
+          "/projects/riaya/landing_7.webp",
         ],
       },
       {
@@ -665,7 +666,12 @@ export const projects: ProjectInterface[] = [
             <li>Availability management</li>
           </ul>
         `,
-        imgArr: ["/projects/riaya/dashboard.webp"],
+        imgArr: [
+          "/projects/riaya/dashboard_1.webp",
+          "/projects/riaya/dashboard_2.webp",
+          "/projects/riaya/dashboard_3.webp",
+          "/projects/riaya/dashboard_4.webp",
+        ],
       },
       {
         title: "Patient Management",
@@ -678,8 +684,9 @@ export const projects: ProjectInterface[] = [
           </ul>
         `,
         imgArr: [
-          "/projects/riaya/appointments.webp",
-          "/projects/riaya/patient-history.webp",
+          "/projects/riaya/appointments_1.webp",
+          "/projects/riaya/appointments_2.webp",
+          "/projects/riaya/appointments_3.webp",
         ],
       },
       {
@@ -692,7 +699,11 @@ export const projects: ProjectInterface[] = [
             <li>System configuration</li>
           </ul>
         `,
-        imgArr: ["/projects/riaya/admin.webp"],
+        imgArr: [
+          "/projects/riaya/admin_1.webp",
+          "/projects/riaya/admin_2.webp",
+          "/projects/riaya/admin_3.webp",
+        ],
       },
     ],
   },

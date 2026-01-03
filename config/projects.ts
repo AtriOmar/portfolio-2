@@ -726,7 +726,7 @@ export const projects: ProjectInterface[] = [
       "Konnect",
     ],
     startDate: new Date("2023-04-01"), // Update with actual dates
-    endDate: new Date("2024-05-30"),
+    endDate: new Date("2023-05-30"),
     cover: "/projects/elcamba/cover.webp",
     description: `
       <p>

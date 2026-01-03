@@ -8,7 +8,7 @@ import ChipContainer from "@/components/ui/chip-container";
 import CustomTooltip from "@/components/ui/custom-tooltip";
 import { projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
-import { cn, formatDateFromObj } from "@/lib/utils";
+import { cn, formatDateRange } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
 
 interface ProjectPageProps {
@@ -47,12 +47,10 @@ export default async function Project({ params }: ProjectPageProps) {
       </Link>
 
       <div>
-        <time
-          dateTime={project.startDate.toISOString()}
-          className="block text-muted-foreground text-sm"
-        >
-          {formatDateFromObj(project.startDate)}
-        </time>
+        {formatDateRange(
+          new Date(project.startDate),
+          new Date(project.endDate)
+        )}
 
         <h1 className="flex items-center mt-2 font-heading text-4xl lg:text-5xl">
           {project.companyName}

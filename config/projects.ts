@@ -193,7 +193,7 @@ export const projects: ProjectInterface[] = [
     category: ["Web Dev", "Full Stack"],
     summary:
       "All-in-one code sharing platform with real-time chat, articles, and community features built for a development competition.",
-    websiteLink: "https://warriors.omaratri.com", // Update with actual domain
+    // websiteLink: "https://warriors.omaratri.com", // Update with actual domain
     techStack: [
       "Next.js",
       "Javascript",
